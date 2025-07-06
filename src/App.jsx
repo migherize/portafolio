@@ -1,22 +1,9 @@
-import About from '@/pages/About';
-import { useEffect, useState } from 'react';
+import useDarkMode from '@/hooks/useDarkMode';
+import CerticatesSection from '@/pages/Certificates';
+import ProjectsSection from '@/pages/Projects';
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
-  
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    const prefersDark = storedTheme === 'dark';
-
-    document.documentElement.classList.toggle('dark', prefersDark);
-    setIsDark(prefersDark);
-  }, []);
-  function toggleDarkMode() {
-    const newDarkMode = !isDark;
-    document.documentElement.classList.toggle('dark', newDarkMode);
-    localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
-    setIsDark(newDarkMode);
-  }
+  const { isDark, toggleDarkMode } = useDarkMode();
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900 text-gray-900 dark:text-white">
@@ -42,7 +29,9 @@ function App() {
     <main>
       <div className="bg-white dark:bg-neutral-900 text-gray-900 dark:text-white">
         </div>
-      <About />
+      <CerticatesSection />
+      <ProjectsSection />
+       
     </main>
 
     {/* Footer */}
