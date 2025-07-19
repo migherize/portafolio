@@ -4,6 +4,7 @@ import AboutMeSection from "@/pages/AboutMeSection";
 import TechStackPageSection from '@/pages/TechStackPage';
 import CerticatesSection from '@/pages/Certificates';
 import ProjectsSection from '@/pages/Projects';
+import ExperienceListSection from '@/pages/ExperienceSection';
 
 function App() {
   const { isDark, toggleDarkMode } = useDarkMode();
@@ -35,8 +36,9 @@ function App() {
       <HeroSection />
       <AboutMeSection />
       <TechStackPageSection />
-      <CerticatesSection />
+      <ExperienceListSection />
       <ProjectsSection />
+      <CerticatesSection />
        
     </main>
 

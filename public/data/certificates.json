@@ -3,7 +3,7 @@
       "title": "React desde cero",
       "institution": "Platzi",
       "year": 2024,
-      "logo": "/src/assets/platzi.png",
+      "logo": "/images/assets/platzi.png",
       "link": "https://platzi.com/cursos/react/"
     },
     {
@@ -38,7 +38,7 @@
       "title": "Diseño UX/UI",
       "institution": "Platzi",
       "year": 2024,
-      "logo": "/src/assets/platzi.png",
+      "logo": "/images/assets/platzi.png",
       "link": "https://platzi.com/cursos/ux-ui/"
     },
     {
@@ -52,7 +52,7 @@
       "title": "Curso de Git y GitHub",
       "institution": "Platzi",
       "year": 2023,
-      "logo": "/src/assets/platzi.png",
+      "logo": "/images/assets/platzi.png",
       "link": "https://platzi.com/cursos/git-github/"
     }
   ]

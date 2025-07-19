@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "title": "Python Software Engineer",
+      "company": "IA Interactive",
+      "startDate": "Mar 2023",
+      "endDate": "Presente",
+      "description": "Migración de microservicios de Python (FastAPI) a Java (Spring Boot) para escalar y estandarizar el stack. Desarrollo de servicios web con FastAPI y GraphQL, usando Kafka para mensajería y Docker para despliegue. Integración de servicios AWS como S3, Lambda, DynamoDB, ECS y Secrets Manager. Monitoreo con Dynatrace y CloudWatch.",
+      "technologies": ["Python", "FastAPI", "Java", "Spring Boot", "GraphQL", "Kafka", "Docker", "AWS", "DynamoDB", "ECS", "Secrets Manager", "Dynatrace", "CloudWatch", "Postman"],
+      "achievements": [
+        "Migración tecnológica a Java/Spring Boot",
+        "Diseño e implementación de servicios escalables en FastAPI",
+        "Automatización y pruebas de APIs",
+        "Integración de múltiples servicios AWS y monitoreo avanzado"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "AI Trainer",
+      "company": "Scale AI",
+      "startDate": "May 2024",
+      "endDate": "Oct 2024",
+      "description": "Diseño de prompts y evaluación de modelos de inteligencia artificial. Validación de código y respuestas en varios lenguajes como Python, HTML, C, C++, y JavaScript para asegurar calidad y precisión.",
+      "technologies": ["Python", "HTML", "C", "C++", "JavaScript"],
+      "achievements": [
+        "Desarrollo de prompts efectivos para entrenamiento de IA",
+        "Validación técnica de respuestas en distintos lenguajes",
+        "Aporte al desarrollo de aplicaciones de IA"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Back End Developer",
+      "company": "Lodgerin",
+      "startDate": "Oct 2024",
+      "endDate": "Apr 2025",
+      "description": "Desarrollo de microservicios RESTful con Python y FastAPI aplicando principios SOLID. Manejo de bases de datos SQL y NoSQL. Trabajo colaborativo remoto con enfoque en backend escalable y pruebas unitarias.",
+      "technologies": ["Python", "FastAPI", "Scrapy", "Pytest", "Docker", "Git", "SQL", "MongoDB"],
+      "achievements": [
+        "Implementación de servicios RESTful escalables",
+        "Uso de buenas prácticas de arquitectura y principios SOLID",
+        "Colaboración efectiva en entorno remoto"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Back End Developer",
+      "company": "Kukun",
+      "startDate": "Mar 2022",
+      "endDate": "Mar 2023",
+      "description": "Diseño de APIs con Django y FastAPI. Uso de GitFlow para control de versiones y CI/CD. Gestión y optimización de bases de datos MySQL y Postgres. Desarrollo de flujos complejos con Airflow y mensajería con Kafka.",
+      "technologies": ["Python", "Django", "FastAPI", "Airflow", "Kafka", "Postgres", "MySQL", "Docker", "GitFlow"],
+      "achievements": [
+        "Automatización de tareas con Airflow",
+        "Integración de microservicios usando Docker",
+        "Uso de metodologías de control de versiones y despliegue"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Data Analyst",
+      "company": "Kukun",
+      "startDate": "Feb 2021",
+      "endDate": "May 2022",
+      "description": "Creación de Webscraping en Python con Selenium, Scrapy y Beautiful Soup. Análisis y manipulación de datos usando Pandas y expresiones regulares.",
+      "technologies": ["Python", "Selenium", "Scrapy", "Beautiful Soup", "Pandas"],
+      "achievements": [
+        "Extracción eficiente de datos mediante Webscraping",
+        "Análisis de datos con Pandas y Python",
+        "Optimización de procesos de recolección de datos"
+      ]
+    }
+  ]
+  

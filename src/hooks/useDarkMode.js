@@ -5,10 +5,17 @@ export default function useDarkMode() {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
-    const prefersDark = storedTheme === 'dark';
 
-    document.documentElement.classList.toggle('dark', prefersDark);
-    setIsDark(prefersDark);
+    // Si nunca se ha guardado el tema => forzar a dark
+    if (!storedTheme) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      setIsDark(true);
+    } else {
+      const prefersDark = storedTheme === 'dark';
+      document.documentElement.classList.toggle('dark', prefersDark);
+      setIsDark(prefersDark);
+    }
   }, []);
 
   const toggleDarkMode = () => {
