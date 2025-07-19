@@ -1,4 +1,6 @@
 import useDarkMode from '@/hooks/useDarkMode';
+import HeroSection from "@/pages/HeroSection";
+import AboutMeSection from "@/pages/AboutMeSection"; 
 import CerticatesSection from '@/pages/Certificates';
 import ProjectsSection from '@/pages/Projects';
 
@@ -29,6 +31,8 @@ function App() {
     <main>
       <div className="bg-white dark:bg-neutral-900 text-gray-900 dark:text-white">
         </div>
+      <HeroSection />
+      <AboutMeSection />
       <CerticatesSection />
       <ProjectsSection />
        
