@@ -1,6 +1,7 @@
 import useDarkMode from '@/hooks/useDarkMode';
 import HeroSection from "@/pages/HeroSection";
 import AboutMeSection from "@/pages/AboutMeSection"; 
+import TechStackPageSection from '@/pages/TechStackPage';
 import CerticatesSection from '@/pages/Certificates';
 import ProjectsSection from '@/pages/Projects';
 
@@ -33,6 +34,7 @@ function App() {
         </div>
       <HeroSection />
       <AboutMeSection />
+      <TechStackPageSection />
       <CerticatesSection />
       <ProjectsSection />
        
