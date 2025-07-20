@@ -14,14 +14,14 @@ export default function HomePage() {
     <div className="min-h-screen bg-white dark:bg-neutral-900 text-gray-900 dark:text-white">
       <Navigation />
 
-      <div className="fixed top-4 right-4 z-50">
+      {/* <div className="fixed top-4 right-4 z-50">
         <button
           onClick={toggleDarkMode}
           className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded text-sm shadow"
         >
           {isDark ? "☀️ Modo Claro" : "🌙 Modo Oscuro"}
         </button>
-      </div>
+      </div> */}
 
       <main>
         <section id="inicio" className="scroll-mt-24">

@@ -34,8 +34,10 @@ function HeroSection() {
     <section className="min-h-screen bg-white dark:bg-neutral-900 py-12 px-6">
       <HeroSectionCard
         name={aboutData.name}
+        title={aboutData.title}
         bio={aboutData.bio}
         profileImage={aboutData.profileImage}
+        backgroundImage={aboutData.backgroundImage}
         githubUrl={aboutData.githubUrl}
         linkedinUrl={aboutData.linkedinUrl}
         email={aboutData.email}

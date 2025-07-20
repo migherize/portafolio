@@ -76,7 +76,7 @@
       ]
     },
     {
-      "id": 101,
+      "id": 104,
       "title": "Ingeniería de Sistemas",
       "company": "Universidad de los Andes",
       "startDate": "2014",
@@ -85,7 +85,7 @@
       "type": "education"
     },
     {
-      "id": 102,
+      "id": 103,
       "title": "Machine Learning Developer Career",
       "company": "Anyone AI",
       "startDate": "2023",
@@ -94,12 +94,21 @@
       "type": "education"
     },
     {
-      "id": 103,
+      "id": 102,
       "title": "PCAP – Certified Associate in Python Programming",
+      "company": "Python Institute",
+      "startDate": "2024",
+      "endDate": "2024",
+      "description": "Certificación oficial del Python Institute. Enfocada en programación, estructuras de datos y fundamentos de Python.",
+      "type": "education"
+    },
+    {
+      "id": 101,
+      "title": "Machine Learning y Deep Learning",
       "company": "Python Institute / Platzi",
-      "startDate": "2023",
+      "startDate": "2024",
       "endDate": "Actualmente",
-      "description": "Certificación oficial del Python Institute, respaldada por Platzi. Enfocada en programación, estructuras de datos y fundamentos de Python.",
+      "description": "Profundiza en algoritmia, aprendizaje supervisado, no supervisado, redes neuronales, y el despliegue de modelos de Data Science e Inteligencia Artificial en producción.",
       "type": "education"
     }
   ]

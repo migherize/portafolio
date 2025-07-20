@@ -1,85 +1,112 @@
+import { useState, useEffect, useRef } from "react";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
-export default function AboutMeCard({
+export default function HeroSection({
   name,
+  title,
   bio,
-  profileImage,
+  backgroundImage,
   githubUrl,
   linkedinUrl,
   email,
   resumeUrl,
-  onScrollToProjects, // callback para "Ver Proyectos"
+  onScrollToProjects,
 }) {
-  const handleDownloadCV = () => {
-    if (resumeUrl) {
-      window.open(resumeUrl, "_blank");
-    }
+  const [showCopyMessage, setShowCopyMessage] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(email);
+    setShowCopyMessage(true);
+
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+    timeoutRef.current = setTimeout(() => {
+      setShowCopyMessage(false);
+    }, 3000);
   };
 
   return (
-    <div className="bg-white dark:bg-neutral-900 border border-transparent rounded-xl p-8 max-w-xl mx-auto text-center">
-      {profileImage && (
-        <img
-          src={profileImage}
-          alt={`${name} profile`}
-          className="w-32 h-32 rounded-full mx-auto mb-6 object-cover"
-        />
-      )}
-      <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{name}</h2>
-      <p className="text-gray-700 dark:text-gray-300 text-lg mb-8">{bio}</p>
+    <section
+      className="w-full min-h-[80vh] relative flex items-center justify-start px-6 md:px-16 py-12 text-white"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay para oscurecer */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-        <Button
-          onClick={handleDownloadCV}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-          disabled={!resumeUrl}
-        >
-          <Download className="w-4 h-4 mr-2" />
-          Descargar CV
-        </Button>
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-4 px-4">
+        <h1 className="text-4xl md:text-5xl font-bold">{name}</h1>
+        {title && (
+          <h2 className="text-xl md:text-2xl font-semibold text-blue-400">
+            {title}
+          </h2>
+        )}
+        <p className="text-lg text-gray-300">{bio}</p>
 
-        <Button
-          variant="outline"
-          onClick={onScrollToProjects}
-          className="border-slate-400 hover:border-blue-400 text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-all duration-300"
-        >
-          Ver Proyectos
-        </Button>
+        {/* Botones */}
+        <div className="flex gap-4 justify-center flex-wrap">
+          <a
+            href={resumeUrl}
+            download
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow hover:scale-105 transition disabled:opacity-50 border-0 inline-flex items-center justify-center"
+          >
+            <Download className="inline-block w-4 h-4 mr-2" />
+            Descargar CV
+          </a>
+          <button
+            onClick={onScrollToProjects}
+            className="bg-transparent hover:bg-blue-700 text-white hover:text-white px-6 py-2 rounded-lg border border-white hover:border-blue-700 transition"
+          >
+            Ver Proyectos
+          </button>
+        </div>
+
+        {/* Redes Sociales */}
+        <div className="flex justify-center space-x-6 mt-4 items-center relative">
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition cursor-pointer"
+            >
+              <Github className="w-8 h-8 " />
+            </a>
+          )}
+          {linkedinUrl && (
+            <a
+              href={linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition cursor-pointer"
+            >
+              <Linkedin className="w-8 h-8" />
+            </a>
+          )}
+
+          {email && (
+            <div className="relative flex items-center">
+              <button
+                onClick={handleCopyEmail}
+                title="Copiar correo"
+                className="hover:text-blue-400 transition cursor-pointer"
+              >
+                <Mail className="w-8 h-8" />
+              </button>
+              {showCopyMessage && (
+                <span className="ml-2 bg-blue-600 text-white text-xs rounded px-2 py-1 whitespace-nowrap absolute top-1/2 left-full transform -translate-y-1/2 translate-x-2 shadow-lg">
+                  Correo copiado ✉️
+                </span>
+              )}
+            </div>
+          )}
+        </div>
       </div>
-
-      <div className="flex justify-center space-x-6 mt-4">
-        {githubUrl && (
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-400 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
-          >
-            <Github className="h-6 w-6" />
-          </a>
-        )}
-
-        {linkedinUrl && (
-          <a
-            href={linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-400 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
-          >
-            <Linkedin className="h-6 w-6" />
-          </a>
-        )}
-
-        {email && (
-          <a
-            href={`mailto:${email}`}
-            className="text-slate-400 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
-          >
-            <Mail className="h-6 w-6" />
-          </a>
-        )}
-      </div>
-    </div>
+    </section>
   );
 }

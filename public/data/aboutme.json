@@ -1,9 +1,11 @@
 {
   "name": "Miguel Herize",
-  "bio": "Soy un desarrollador full stack con pasión por crear aplicaciones web modernas y accesibles. Me encanta aprender nuevas tecnologías y compartir conocimiento.",
+  "title": "Python Backend Developer | Data Engineer | Machine Learning Engineer",
+  "bio": "Desarrollador Python con 5 años de experiencia en backend, APIs y aplicaciones web. Especialista en Django, FastAPI y bases de datos, construyendo soluciones escalables con enfoque en microservicios y cloud.",
   "profileImage": "/images/profile.jpeg",
   "githubUrl": "https://github.com/migherize",
   "linkedinUrl": "https://www.linkedin.com/in/miguel-herize-267764179/",
   "email": "migherize@gmail.com",
-  "resumeUrl": "/files/miguel_herize_cv.pdf"
+  "backgroundImage": "/images/background.webp",
+  "resumeUrl": "/pdf/cv-miguel-herize.pdf"
 }

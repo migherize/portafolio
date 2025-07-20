@@ -5,15 +5,11 @@ export default function ExperienceSection() {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
-    console.log("Montando ExperienceSection...");
     fetch("/data/experiences.json")
       .then((res) => {
-        console.log("Respuesta fetch status:", res.status);
-        console.log("Respuesta fetch ok?", res.ok);
         return res.json();
       })
       .then((data) => {
-        console.log("Data parseada:", data);
         setExperiences(data);
       })
       .catch((err) => console.error("Error cargando experiencias:", err));
