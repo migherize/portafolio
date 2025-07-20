@@ -2,6 +2,7 @@
     {
       "id": 1,
       "title": "Python Software Engineer",
+      "type": "work",
       "company": "IA Interactive",
       "startDate": "Mar 2023",
       "endDate": "Presente",
@@ -17,6 +18,7 @@
     {
       "id": 2,
       "title": "AI Trainer",
+      "type": "work",
       "company": "Scale AI",
       "startDate": "May 2024",
       "endDate": "Oct 2024",
@@ -31,6 +33,7 @@
     {
       "id": 3,
       "title": "Back End Developer",
+      "type": "work",
       "company": "Lodgerin",
       "startDate": "Oct 2024",
       "endDate": "Apr 2025",
@@ -45,6 +48,7 @@
     {
       "id": 4,
       "title": "Back End Developer",
+      "type": "work",
       "company": "Kukun",
       "startDate": "Mar 2022",
       "endDate": "Mar 2023",
@@ -59,6 +63,7 @@
     {
       "id": 5,
       "title": "Data Analyst",
+      "type": "work",
       "company": "Kukun",
       "startDate": "Feb 2021",
       "endDate": "May 2022",
@@ -69,6 +74,33 @@
         "Análisis de datos con Pandas y Python",
         "Optimización de procesos de recolección de datos"
       ]
+    },
+    {
+      "id": 101,
+      "title": "Ingeniería de Sistemas",
+      "company": "Universidad de los Andes",
+      "startDate": "2014",
+      "endDate": "2022",
+      "description": "Formación profesional en Ingeniería de Sistemas, enfocada en desarrollo de software, algoritmos y gestión de proyectos.",
+      "type": "education"
+    },
+    {
+      "id": 102,
+      "title": "Machine Learning Developer Career",
+      "company": "Anyone AI",
+      "startDate": "2023",
+      "endDate": "2024",
+      "description": "Programa intensivo especializado en Machine Learning, Deep Learning y despliegue de modelos en producción.",
+      "type": "education"
+    },
+    {
+      "id": 103,
+      "title": "PCAP – Certified Associate in Python Programming",
+      "company": "Python Institute / Platzi",
+      "startDate": "2023",
+      "endDate": "Actualmente",
+      "description": "Certificación oficial del Python Institute, respaldada por Platzi. Enfocada en programación, estructuras de datos y fundamentos de Python.",
+      "type": "education"
     }
   ]
   
