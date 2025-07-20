@@ -1,11 +1,14 @@
 {
-    "aboutMe": "Soy un desarrollador fullstack con pasión por el código.",
-    "stats": {
-      "projects": "20+",
-      "experience": "5+",
-      "clients": "30+",
-      "technologies": "25+"
-    },
-    "aboutImage": "/images/about.avif"
-  }
-  
+  "aboutMe": [
+    "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes con más de 5 años de experiencia en desarrollo de software.",
+    "He trabajado en proyectos de backend y microservicios, principalmente con Python y frameworks como FastAPI y Django.",
+    "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas para construir software escalable y eficiente."
+  ],
+  "stats": [
+    { "label": "Proyectos", "value": "10+" },
+    { "label": "Años", "value": "5+" },
+    { "label": "Clientes", "value": "5+" },
+    { "label": "Tecnologías", "value": "20+" }
+  ],
+  "aboutImage": "/images/about.png"
+}

@@ -31,7 +31,7 @@ function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen bg-white dark:bg-neutral-900 py-12 px-6">
+    <section className="min-h-screen bg-white dark:bg-neutral-900 py-12 px-6 pt-16">
       <HeroSectionCard
         name={aboutData.name}
         title={aboutData.title}
