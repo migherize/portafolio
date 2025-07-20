@@ -23,3 +23,9 @@ local/
 *.njsproj
 *.sln
 *.sw?
+
+.next/
+dist/
+out/
+*.log
+.DS_Store
