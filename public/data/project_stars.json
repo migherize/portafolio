@@ -1,0 +1,35 @@
+  [
+    {
+      "title": "Portafolio Personal",
+      "description": "Sitio web responsive con React y Tailwind para mostrar experiencia, habilidades y contacto.",
+      "tech": ["React", "Tailwind"],
+      "year": 2024,
+      "image": "https://www.slideteam.net/wp/wp-content/uploads/2024/04/9-Portafolio-personal-de-Disenador-de-experiencia-de-usuario.png",
+      "link": "https://miguelherize.dev"
+    },
+    {
+      "title": "E-commerce de Café",
+      "description": "Tienda virtual con carrito, filtros y panel de administrador.",
+      "tech": ["React", "Firebase"],
+      "year": 2023,
+      "image": "https://thumbs.dreamstime.com/z/entrega-de-caf%C3%A9-en-m%C3%B3vil-concepto-ecommerce-l%C3%ADnea-infograf%C3%ADa-pedidos-y-bebidas-dise%C3%B1o-aplicaciones-web-ilustraci%C3%B3n-vectorial-227704237.jpg?w=992",
+      "link": "https://cafestore.vercel.app"
+    },
+    {
+      "title": "Buscador de Películas",
+      "description": "App para buscar y guardar películas usando la API de OMDb.",
+      "tech": ["JavaScript", "HTML/CSS"],
+      "year": 2022,
+      "image": "https://tse2.mm.bing.net/th/id/OIP.2WjduMKlCyfLM8-TNa0yEgHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "link": "https://moviesearch.app"
+    },
+    {
+      "title": "Dashboard de Finanzas",
+      "description": "Panel visual para ingresos, gastos y balance mensual.",
+      "tech": ["React", "Chart.js"],
+      "year": 2024,
+      "image": "https://tse2.mm.bing.net/th/id/OIP._aCdBwLNbkTkfAEBFIDA7gHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "link": "https://finanzas-app.vercel.app"
+    }
+  ]
+  

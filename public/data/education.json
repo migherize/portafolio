@@ -1,0 +1,32 @@
+[
+  {
+    "id": 101,
+    "type": "degree",
+    "title": "Machine Learning Developer Career",
+    "institution": "Anyone AI",
+    "startDate": "2023",
+    "endDate": "2024",
+    "description": "Programa intensivo especializado en Machine Learning, Deep Learning y despliegue de modelos en producción.",
+    "grade": ""
+  },
+  {
+    "id": 102,
+    "type": "certification",
+    "title": "PCAP – Certified Associate in Python Programming",
+    "institution": "Python Institute",
+    "startDate": "2024",
+    "endDate": "2024",
+    "description": "Certificación oficial del Python Institute. Enfocada en programación, estructuras de datos y fundamentos de Python.",
+    "grade": ""
+  },
+  {
+    "id": 103,
+    "type": "course",
+    "title": "Machine Learning y Deep Learning",
+    "institution": "Python Institute / Platzi",
+    "startDate": "2024",
+    "endDate": "Actualmente",
+    "description": "Profundiza en algoritmia, aprendizaje supervisado, no supervisado, redes neuronales, y el despliegue de modelos de Data Science e Inteligencia Artificial en producción.",
+    "grade": ""
+  }
+]

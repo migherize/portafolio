@@ -3,9 +3,11 @@ import { Navigation } from "@/components/Navigation/Navigation";
 import HeroSection from "@/pages/HeroSection";
 import AboutMeSection from "@/pages/AboutMeSection";
 import TechStackPageSection from "@/pages/TechStackPage";
-import CerticatesSection from "@/pages/Certificates";
-import ProjectsSection from "@/pages/Projects";
+import ProjectsSection from "@/pages/ProjectsSection";
 import ExperienceListSection from "@/pages/ExperienceSection";
+import EducationSection from "@/pages/EducationSection";
+import ContactSection from "@/pages/ContactSection";
+import FooterSection from "@/pages/FooterSection";
 
 export default function HomePage() {
   const { isDark, toggleDarkMode } = useDarkMode();
@@ -36,17 +38,21 @@ export default function HomePage() {
         <section id="experiencia" className="scroll-mt-24">
           <ExperienceListSection />
         </section>
-        <section id="proyectos" className="scroll-mt-24">
-          <ProjectsSection />
+        <section id="formacion" className="scroll-mt-24">
+          < ProjectsSection />
         </section>
         <section id="formacion" className="scroll-mt-24">
-          <CerticatesSection />
+          < EducationSection />
         </section>
+        <section id="formacion" className="scroll-mt-24">
+          < ContactSection />
+        </section>
+        
       </main>
 
-      <footer className="text-center py-6 border-t border-gray-200 dark:border-neutral-700 text-sm text-gray-500 dark:text-gray-400">
-        © {new Date().getFullYear()} Usuario. All rights reserved.
-      </footer>
+      <section id="formacion" className="scroll-mt-24">
+          <FooterSection />
+        </section>
     </div>
   );
 }
