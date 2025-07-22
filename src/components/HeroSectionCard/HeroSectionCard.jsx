@@ -28,15 +28,13 @@ export default function HeroSection({
 
   return (
     <section
-      className="w-full min-h-[80vh] relative flex items-center justify-start px-6 md:px-16 py-12 text-white"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className={`
+        w-full min-h-[80vh] relative flex items-center justify-start px-6 md:px-16 py-12 text-white
+        bg-transparent md:bg-[url('${backgroundImage}')] md:bg-cover md:bg-center md:bg-no-repeat
+      `}
     >
       {/* Overlay para oscurecer */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="hidden md:block absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-4 px-4">

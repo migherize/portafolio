@@ -1,17 +1,25 @@
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRef, useState } from "react";
 
 export function ContactSection({ data }) {
-  const handleContactClick = () => {
-    if (data?.email) {
-      window.location.href = `mailto:${data.email}`;
-    }
-  };
+  const [copiedText, setCopiedText] = useState("");
+  const timeoutRef = useRef(null);
 
-  const handleEmailClick = () => {
-    if (data?.email) {
-      window.location.href = `mailto:${data.email}`;
+  const handleCopyToClipboard = (text, label) => {
+    if (!text) {
+      alert("Información no disponible.");
+      return;
     }
+
+    navigator.clipboard.writeText(text);
+    setCopiedText(label);
+
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+    timeoutRef.current = setTimeout(() => {
+      setCopiedText("");
+    }, 3000);
   };
 
   return (
@@ -24,22 +32,31 @@ export function ContactSection({ data }) {
           ¿Tienes un proyecto en mente? Me encantaría conocer más sobre tu idea
           y cómo puedo ayudarte a hacerla realidad.
         </p>
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
-            onClick={handleContactClick}
+            onClick={() => handleCopyToClipboard(data?.phone, "Teléfono")}
             className="bg-gradient-to-r from-blue-600 to-gray-600 hover:from-blue-700 hover:to-gray-700 text-white px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            Contactar
+            <Phone className="w-4 h-4 mr-2" />
+            Copiar Teléfono
           </Button>
+
           <Button
             variant="outline"
-            onClick={handleEmailClick}
+            onClick={() => handleCopyToClipboard(data?.email, "Email")}
             className="border-slate-400 hover:border-blue-400 text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-all duration-300"
           >
             <Mail className="w-4 h-4 mr-2" />
-            Enviar Email
+            Copiar Email
           </Button>
         </div>
+
+        {copiedText && (
+          <p className="mt-4 text-green-400 font-medium">
+            ¡{copiedText} copiado al portapapeles!
+          </p>
+        )}
       </div>
     </section>
   );

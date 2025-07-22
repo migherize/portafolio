@@ -28,7 +28,7 @@ export function ProjectsSection({ projects = [] }) {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-slate-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              className="bg-slate-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl flex flex-col h-full"
             >
               {project.imageUrl && (
                 <img
@@ -38,41 +38,43 @@ export function ProjectsSection({ projects = [] }) {
                 />
               )}
 
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className={`text-xl font-bold ${getColorClass(index)}`}>
-                    {project.title}
-                  </h3>
-                  <div className="flex space-x-2">
-                    {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`hover:${getColorClass(index)} text-slate-400 transition-colors`}
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`hover:${getColorClass(index)} text-slate-400 transition-colors`}
-                      >
-                        <Github className="h-4 w-4" />
-                      </a>
-                    )}
+              <div className="p-6 flex flex-col flex-1 justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className={`text-xl font-bold ${getColorClass(index)}`}>
+                      {project.title}
+                    </h3>
+                    <div className="flex space-x-2">
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`hover:${getColorClass(index)} text-slate-400 transition-colors`}
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`hover:${getColorClass(index)} text-slate-400 transition-colors`}
+                        >
+                          <Github className="h-4 w-4" />
+                        </a>
+                      )}
+                    </div>
                   </div>
+
+                  <p className="text-slate-300 text-sm mb-4">
+                    {project.description}
+                  </p>
                 </div>
 
-                <p className="text-slate-300 text-sm mb-4">
-                  {project.description}
-                </p>
-
                 {Array.isArray(project.technologies) && project.technologies.length > 0 && (
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mt-4">
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
@@ -87,17 +89,6 @@ export function ProjectsSection({ projects = [] }) {
             </div>
           ))}
         </div>
-{/* 
-        <div className="text-center mt-12">
-          <Button
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-            onClick={() => {
-              window.open("https://github.com/migherize", "_blank");
-            }}
-          >
-            Ver Todos los Proyectos
-          </Button>
-        </div> */}
       </div>
     </section>
   );
