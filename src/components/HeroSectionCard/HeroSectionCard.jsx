@@ -53,13 +53,13 @@ export default function HeroSection({
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-4 px-4">
-        <h1 className="text-5xl md:text-6xl font-bold">{name}</h1>
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">{name}</h1>
         {title && (
-          <h2 className="text-4xl md:text-4xl font-semibold text-blue-400">
+          <h2 className="text-1xl sm:text-3xl md:text-4xl font-semibold text-blue-400">
             {title}
           </h2>
         )}
-        <p className="text-2xl text-gray-300">{bio}</p>
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-300">{bio}</p>
 
         {/* Botones */}
         <div className="flex gap-4 justify-center flex-wrap">
