@@ -14,6 +14,14 @@ export default function HeroSection({
 }) {
   const [showCopyMessage, setShowCopyMessage] = useState(false);
   const timeoutRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 768);
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -28,13 +36,20 @@ export default function HeroSection({
 
   return (
     <section
-      className={`
-        w-full min-h-[80vh] relative flex items-center justify-start px-6 md:px-16 py-12 text-white
-        bg-transparent md:bg-[url('${backgroundImage}')] md:bg-cover md:bg-center md:bg-no-repeat
-      `}
+      className="w-full min-h-[80vh] relative flex items-center justify-center px-6 md:px-16 py-12 text-white bg-transparent"
+      style={
+        isDesktop
+          ? {
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }
+          : {}
+      }
     >
-      {/* Overlay para oscurecer */}
-      <div className="hidden md:block absolute inset-0 bg-black/60"></div>
+      {/* Overlay para oscurecer solo en desktop */}
+      {isDesktop && <div className="absolute inset-0 bg-black/60"></div>}
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-4 px-4">
