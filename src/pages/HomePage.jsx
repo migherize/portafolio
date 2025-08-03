@@ -1,58 +1,36 @@
-import useDarkMode from "@/hooks/useDarkMode";
-import { Navigation } from "@/components/Navigation/Navigation";
-import HeroSection from "@/pages/HeroSection";
-import AboutMeSection from "@/pages/AboutMeSection";
-import TechStackPageSection from "@/pages/TechStackPage";
-import ProjectsSection from "@/pages/ProjectsSection";
-import ExperienceListSection from "@/pages/ExperienceSection";
-import EducationSection from "@/pages/EducationSection";
-import ContactSection from "@/pages/ContactSection";
-import FooterSection from "@/pages/FooterSection";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
-  const { isDark, toggleDarkMode } = useDarkMode();
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (username.trim() !== "") {
+      navigate(`/${username.trim()}`);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-900 text-gray-900 dark:text-white">
-      <Navigation />
-
-      {/* <div className="fixed top-4 right-4 z-50">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white px-4">
+      <h1 className="text-3xl font-bold mb-6">Ingresa tu username</h1>
+      <form onSubmit={handleSubmit} className="flex gap-2">
+        <input
+          type="text"
+          placeholder="Ejemplo: MiguelHerize"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          className="px-4 py-2 rounded border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          autoFocus
+        />
         <button
-          onClick={toggleDarkMode}
-          className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded text-sm shadow"
+          type="submit"
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
         >
-          {isDark ? "☀️ Modo Claro" : "🌙 Modo Oscuro"}
+          Ir
         </button>
-      </div> */}
-
-      <main>
-        <section id="inicio" className="scroll-mt-24">
-          <HeroSection />
-        </section>
-        <section id="about" className="scroll-mt-24">
-          <AboutMeSection />
-        </section>
-        <section id="stack" className="scroll-mt-24">
-          <TechStackPageSection />
-        </section>
-        <section id="experiencia" className="scroll-mt-24">
-          <ExperienceListSection />
-        </section>
-        <section id="formacion" className="scroll-mt-24">
-          < ProjectsSection />
-        </section>
-        <section id="formacion" className="scroll-mt-24">
-          < EducationSection />
-        </section>
-        <section id="formacion" className="scroll-mt-24">
-          < ContactSection />
-        </section>
-        
-      </main>
-
-      <section id="formacion" className="scroll-mt-24">
-          <FooterSection />
-        </section>
+      </form>
     </div>
   );
 }

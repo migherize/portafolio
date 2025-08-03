@@ -1,0 +1,625 @@
+[
+  {
+    "username": "MiguelHerize",
+    "type_portafolio": "modern",
+    "sharedProfile": {
+      "name": "Miguel Herize",
+      "role": "Backend Developer",
+      "description": "Apasionado por el código limpio y las APIs.",
+
+      "heroSection": {
+        "title": "Python Backend Developer | AWS | Data Engineer | Machine Learning Engineer",
+        "bio": "Desarrollador Python con 5 años de experiencia en backend, APIs y aplicaciones web. Especialista en Django, FastAPI y bases de datos, construyendo soluciones escalables con enfoque en microservicios y cloud.",
+        "profileImage": "/images/profile.jpeg",
+        "backgroundImage": "/images/1743778424500.png",
+        "resumeUrl": "/pdf/cv-miguel-herize.pdf"
+      },
+
+      "aboutMe": {
+        "aboutMe": [
+          "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes con más de 5 años de experiencia en desarrollo de software.",
+          "He trabajado en proyectos de backend y microservicios, principalmente con Python y frameworks como FastAPI y Django.",
+          "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas para construir software escalable y eficiente."
+        ],
+        "stats": [
+          { "label": "Proyectos", "value": "10+" },
+          { "label": "Años", "value": "5+" },
+          { "label": "Clientes", "value": "5+" },
+          { "label": "Tecnologías", "value": "20+" }
+        ],
+        "aboutImage": "/images/about.png"
+      },
+      "socials": {
+        "email": "migherize@gmail.com",
+        "phone": "+56956052252",
+        "githubUrl": "https://github.com/migherize",
+        "linkedinUrl": "https://www.linkedin.com/in/miguel-herize-267764179/"
+      }
+    },
+    "techStack": [
+      {
+        "id": 1,
+        "name": "Python",
+        "category": "backend",
+        "level": "senior",
+        "icon": "code",
+        "color": "blue"
+      },
+      {
+        "id": 2,
+        "name": "Django",
+        "category": "backend",
+        "level": "senior",
+        "icon": "server",
+        "color": "blue"
+      },
+      {
+        "id": 3,
+        "name": "FastAPI",
+        "category": "backend",
+        "level": "senior",
+        "icon": "zap",
+        "color": "blue"
+      },
+      {
+        "id": 4,
+        "name": "Scrapy",
+        "category": "backend",
+        "level": "senior",
+        "icon": "layers",
+        "color": "blue"
+      },
+      {
+        "id": 5,
+        "name": "Selenium",
+        "category": "tools",
+        "level": "senior",
+        "icon": "shield",
+        "color": "green"
+      },
+      {
+        "id": 6,
+        "name": "Docker",
+        "category": "tools",
+        "level": "senior",
+        "icon": "package",
+        "color": "blue"
+      },
+      {
+        "id": 7,
+        "name": "Java",
+        "category": "backend",
+        "level": "semi-senior",
+        "icon": "code",
+        "color": "green"
+      },
+      {
+        "id": 8,
+        "name": "Spring Boot",
+        "category": "backend",
+        "level": "semi-senior",
+        "icon": "server",
+        "color": "green"
+      },
+      {
+        "id": 9,
+        "name": "GraphQL",
+        "category": "backend",
+        "level": "semi-senior",
+        "icon": "layers",
+        "color": "purple"
+      },
+      {
+        "id": 10,
+        "name": "Kafka",
+        "category": "backend",
+        "level": "semi-senior",
+        "icon": "cloud",
+        "color": "purple"
+      },
+      {
+        "id": 11,
+        "name": "S3",
+        "category": "backend",
+        "level": "semi-senior",
+        "icon": "cloud",
+        "color": "orange"
+      },
+      {
+        "id": 12,
+        "name": "Lambda",
+        "category": "backend",
+        "level": "semi-senior",
+        "icon": "zap",
+        "color": "orange"
+      },
+      {
+        "id": 13,
+        "name": "Airflow",
+        "category": "tools",
+        "level": "semi-senior",
+        "icon": "layers",
+        "color": "green"
+      },
+      {
+        "id": 14,
+        "name": "MongoDB",
+        "category": "database",
+        "level": "semi-senior",
+        "icon": "database",
+        "color": "green"
+      },
+      {
+        "id": 15,
+        "name": "MySQL",
+        "category": "database",
+        "level": "semi-senior",
+        "icon": "database",
+        "color": "blue"
+      },
+      {
+        "id": 16,
+        "name": "PostgreSQL",
+        "category": "database",
+        "level": "semi-senior",
+        "icon": "database",
+        "color": "purple"
+      },
+      {
+        "id": 17,
+        "name": "DynamoDB",
+        "category": "database",
+        "level": "semi-senior",
+        "icon": "database",
+        "color": "orange"
+      },
+      {
+        "id": 18,
+        "name": "ECS",
+        "category": "tools",
+        "level": "semi-senior",
+        "icon": "cloud",
+        "color": "blue"
+      },
+      {
+        "id": 19,
+        "name": "Secrets Manager",
+        "category": "tools",
+        "level": "semi-senior",
+        "icon": "shield",
+        "color": "blue"
+      },
+      {
+        "id": 20,
+        "name": "Dynatrace",
+        "category": "tools",
+        "level": "semi-senior",
+        "icon": "zap",
+        "color": "purple"
+      },
+      {
+        "id": 21,
+        "name": "CloudWatch",
+        "category": "tools",
+        "level": "semi-senior",
+        "icon": "cloud",
+        "color": "purple"
+      },
+      {
+        "id": 22,
+        "name": "React",
+        "category": "frontend",
+        "level": "junior",
+        "icon": "layers",
+        "color": "blue"
+      },
+      {
+        "id": 23,
+        "name": "Vue",
+        "category": "frontend",
+        "level": "junior",
+        "icon": "layers",
+        "color": "green"
+      },
+      {
+        "id": 24,
+        "name": "CSS",
+        "category": "frontend",
+        "level": "junior",
+        "icon": "paintbrush",
+        "color": "blue"
+      },
+      {
+        "id": 25,
+        "name": "JavaScript",
+        "category": "frontend",
+        "level": "junior",
+        "icon": "code",
+        "color": "yellow"
+      },
+      {
+        "id": 26,
+        "name": "TypeScript",
+        "category": "frontend",
+        "level": "junior",
+        "icon": "code",
+        "color": "blue"
+      },
+      {
+        "id": 27,
+        "name": "HTML",
+        "category": "frontend",
+        "level": "junior",
+        "icon": "layers",
+        "color": "orange"
+      },
+      {
+        "id": 28,
+        "name": "Visual Studio Code",
+        "category": "tools",
+        "level": "tools",
+        "icon": "code",
+        "color": "blue"
+      },
+      {
+        "id": 29,
+        "name": "Git",
+        "category": "tools",
+        "level": "tools",
+        "icon": "git-branch",
+        "color": "green"
+      },
+      {
+        "id": 30,
+        "name": "Docker",
+        "category": "tools",
+        "level": "tools",
+        "icon": "package",
+        "color": "blue"
+      },
+      {
+        "id": 31,
+        "name": "Jenkins",
+        "category": "tools",
+        "level": "tools",
+        "icon": "zap",
+        "color": "purple"
+      },
+      {
+        "id": 32,
+        "name": "Postman",
+        "category": "tools",
+        "level": "tools",
+        "icon": "package",
+        "color": "orange"
+      }
+    ],
+    "experiences": [
+      {
+        "id": 1,
+        "title": "Python Software Engineer",
+        "type": "work",
+        "company": "IA Interactive",
+        "startDate": "Mar 2023",
+        "endDate": "Presente",
+        "description": "Migración de microservicios de Python (FastAPI) a Java (Spring Boot) para escalar y estandarizar el stack. Desarrollo de servicios web con FastAPI y GraphQL, usando Kafka para mensajería y Docker para despliegue. Integración de servicios AWS como S3, Lambda, DynamoDB, ECS y Secrets Manager. Monitoreo con Dynatrace y CloudWatch.",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "Java",
+          "Spring Boot",
+          "GraphQL",
+          "Kafka",
+          "Docker",
+          "AWS",
+          "DynamoDB",
+          "ECS",
+          "Secrets Manager",
+          "Dynatrace",
+          "CloudWatch",
+          "Postman"
+        ],
+        "achievements": [
+          "Migración tecnológica a Java/Spring Boot",
+          "Diseño e implementación de servicios escalables en FastAPI",
+          "Automatización y pruebas de APIs",
+          "Integración de múltiples servicios AWS y monitoreo avanzado"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "AI Trainer",
+        "type": "work",
+        "company": "Scale AI",
+        "startDate": "May 2024",
+        "endDate": "Oct 2024",
+        "description": "Diseño de prompts y evaluación de modelos de inteligencia artificial. Validación de código y respuestas en varios lenguajes como Python, HTML, C, C++, y JavaScript para asegurar calidad y precisión.",
+        "technologies": [
+          "Python",
+          "HTML",
+          "C",
+          "C++",
+          "JavaScript"
+        ],
+        "achievements": [
+          "Desarrollo de prompts efectivos para entrenamiento de IA",
+          "Validación técnica de respuestas en distintos lenguajes",
+          "Aporte al desarrollo de aplicaciones de IA"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Back End Developer",
+        "type": "work",
+        "company": "Lodgerin",
+        "startDate": "Oct 2024",
+        "endDate": "Apr 2025",
+        "description": "Desarrollo de microservicios RESTful con Python y FastAPI aplicando principios SOLID. Manejo de bases de datos SQL y NoSQL. Trabajo colaborativo remoto con enfoque en backend escalable y pruebas unitarias.",
+        "technologies": [
+          "Python",
+          "FastAPI",
+          "Scrapy",
+          "Pytest",
+          "Docker",
+          "Git",
+          "SQL",
+          "MongoDB"
+        ],
+        "achievements": [
+          "Implementación de servicios RESTful escalables",
+          "Uso de buenas prácticas de arquitectura y principios SOLID",
+          "Colaboración efectiva en entorno remoto"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Back End Developer",
+        "type": "work",
+        "company": "Kukun",
+        "startDate": "Mar 2022",
+        "endDate": "Mar 2023",
+        "description": "Diseño de APIs con Django y FastAPI. Uso de GitFlow para control de versiones y CI/CD. Gestión y optimización de bases de datos MySQL y Postgres. Desarrollo de flujos complejos con Airflow y mensajería con Kafka.",
+        "technologies": [
+          "Python",
+          "Django",
+          "FastAPI",
+          "Airflow",
+          "Kafka",
+          "Postgres",
+          "MySQL",
+          "Docker",
+          "GitFlow"
+        ],
+        "achievements": [
+          "Automatización de tareas con Airflow",
+          "Integración de microservicios usando Docker",
+          "Uso de metodologías de control de versiones y despliegue"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Data Analyst",
+        "type": "work",
+        "company": "Kukun",
+        "startDate": "Feb 2021",
+        "endDate": "May 2022",
+        "description": "Creación de Webscraping en Python con Selenium, Scrapy y Beautiful Soup. Análisis y manipulación de datos usando Pandas y expresiones regulares.",
+        "technologies": [
+          "Python",
+          "Selenium",
+          "Scrapy",
+          "Beautiful Soup",
+          "Pandas"
+        ],
+        "achievements": [
+          "Extracción eficiente de datos mediante Webscraping",
+          "Análisis de datos con Pandas y Python",
+          "Optimización de procesos de recolección de datos"
+        ]
+      },
+      {
+        "id": 104,
+        "title": "Ingeniería de Sistemas",
+        "company": "Universidad de los Andes",
+        "startDate": "2014",
+        "endDate": "2022",
+        "description": "Formación profesional en Ingeniería de Sistemas, enfocada en desarrollo de software, algoritmos y gestión de proyectos.",
+        "type": "education"
+      },
+      {
+        "id": 103,
+        "title": "Machine Learning Developer Career",
+        "company": "Anyone AI",
+        "startDate": "2023",
+        "endDate": "2024",
+        "description": "Programa intensivo especializado en Machine Learning, Deep Learning y despliegue de modelos en producción.",
+        "type": "education"
+      },
+      {
+        "id": 102,
+        "title": "PCAP – Certified Associate in Python Programming",
+        "company": "Python Institute",
+        "startDate": "2024",
+        "endDate": "2024",
+        "description": "Certificación oficial del Python Institute. Enfocada en programación, estructuras de datos y fundamentos de Python.",
+        "type": "education"
+      },
+      {
+        "id": 101,
+        "title": "Machine Learning y Deep Learning",
+        "company": "Platzi",
+        "startDate": "2024",
+        "endDate": "Actualmente",
+        "description": "Profundiza en algoritmia, aprendizaje supervisado, no supervisado, redes neuronales, y el despliegue de modelos de Data Science e Inteligencia Artificial en producción.",
+        "type": "education"
+      }
+    ],
+    "projects": [
+      {
+        "id": 3,
+        "title": "API Academia de Magia",
+        "description": "API para gestión de usuarios, inscripciones y operaciones CRUD en un sistema académico ficticio.",
+        "imageUrl": "/images/api-academia-magia.png",
+        "demoUrl": "",
+        "githubUrl": "https://github.com/migherize/Reino_del_Trebol",
+        "technologies": [
+          "FastAPI",
+          "Pytest",
+          "SQLAlchemy",
+          "Docker"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Webscraping de Turismo Madrid",
+        "description": "Proyecto de webscraping sobre la web de turismo de Madrid usando Scrapy, Docker y MongoDB.",
+        "imageUrl": "/images/turismo-madrid.png",
+        "demoUrl": "",
+        "githubUrl": "https://github.com/migherize/TourismMadrid",
+        "technologies": [
+          "Fastapi",
+          "Scrapy",
+          "MongoDB",
+          "Docker"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Webscraping con Airflow",
+        "description": "Monitoreo en Airflow para la ejecución y automatización de procesos de webscraping.",
+        "imageUrl": "/images/airflow-monitoring.jpeg",
+        "demoUrl": "",
+        "githubUrl": "https://gitlab.com/migherize/airflow-webscraping",
+        "technologies": [
+          "Apache Airflow",
+          "FastAPI",
+          "Docker",
+          "Kafka"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": 101,
+        "type": "degree",
+        "title": "Ingeniería de Sistemas",
+        "institution": "Universidad de los Andes",
+        "startDate": "2014",
+        "endDate": "2022",
+        "description": "Formación profesional en Ingeniería de Sistemas, enfocada en desarrollo de software, algoritmos y gestión de proyectos.",
+        "grade": "Sistemas Computacionales",
+        "url": "https://drive.google.com/file/d/13ezxHm30Civ1r-zTXCvxdWKSOJmmmVlG/view?usp=drive_link"
+      },
+      {
+        "id": 102,
+        "type": "degree",
+        "title": "Machine Learning Developer Career",
+        "institution": "Anyone AI",
+        "startDate": "2024",
+        "endDate": "2025",
+        "description": "Programa intensivo especializado en Machine Learning, Deep Learning y despliegue de modelos en producción.",
+        "grade": "Machine Learning Engineer",
+        "url": "https://drive.google.com/file/d/13ezxHm30Civ1r-zTXCvxdWKSOJmmmVlG/view?usp=drive_link"
+      },
+      {
+        "id": 103,
+        "type": "certification",
+        "title": "PCAP – Certified Associate in Python Programming",
+        "institution": "Python Institute",
+        "startDate": "2025",
+        "endDate": "Lifetime",
+        "description": "Certificación oficial que valida habilidades en sintaxis básica, estructuras de datos y POO con Python.",
+        "grade": "Certificado Oficial",
+        "url": "https://verify.openedg.org/?id=82gO.YrwH.3cst"
+      },
+      {
+        "id": 102,
+        "type": "certification",
+        "title": "Backend Developer (Python Stack)",
+        "institution": "Squadmakers",
+        "startDate": "2024",
+        "endDate": "2024",
+        "description": "Curso de backend con Python, FastAPI, bases de datos SQL/NoSQL, pruebas y principios SOLID.",
+        "grade": "Semi-Senior Level",
+        "url": "https://drive.google.com/file/d/1dOE4nfMfzREXLihfeXySEVefrYx5L9Z-/view?usp=sharing"
+      },
+      {
+        "id": 103,
+        "type": "course",
+        "title": "Inteligencia Emocional Aplicada: Un Camino a la Excelencia",
+        "institution": "Udemy",
+        "startDate": "2025",
+        "endDate": "2025",
+        "description": "Desarrolla habilidades emocionales para la gestión personal y profesional.",
+        "grade": "Completado",
+        "url": "https://www.udemy.com/certificate/UC-05239e5e-f42c-49c1-b142-35fcf38988d4/"
+      },
+      {
+        "id": 104,
+        "type": "course",
+        "title": "Python PCAP: Pass Certified Associate in Python Programming",
+        "institution": "Udemy",
+        "startDate": "2025",
+        "endDate": "2025",
+        "description": "Curso preparatorio para obtener la certificación oficial PCAP en Python.",
+        "grade": "Completado",
+        "url": "https://www.udemy.com/certificate/UC-0e0c3065-3f3f-4cdf-9bab-82ea422f030a/"
+      },
+      {
+        "id": 105,
+        "type": "course",
+        "title": "Test De Aptitud Python",
+        "institution": "OpenWebinars",
+        "startDate": "2023",
+        "endDate": "2023",
+        "description": "Evaluación de conocimientos en Python, estructuras de datos y POO.",
+        "grade": "Medium",
+        "url": "https://drive.google.com/file/d/1wxo_pUpVnLqm94gk-dfY4DKMMPEdFumL/view?usp=drive_link"
+      },
+      {
+        "id": 106,
+        "type": "course",
+        "title": "Django REST Framework",
+        "institution": "Platzi",
+        "startDate": "2025",
+        "endDate": "2025",
+        "description": "Creación de APIs RESTful con Django REST Framework y mejores prácticas.",
+        "grade": "Completado",
+        "url": "https://drive.google.com/file/d/1jqpc52bH_XTK16fVzvDer9k64OPvRV3Y/view?usp=drive_link"
+      },
+      {
+        "id": 107,
+        "type": "course",
+        "title": "Django",
+        "institution": "Platzi",
+        "startDate": "2025",
+        "endDate": "2025",
+        "description": "Curso práctico de desarrollo web completo con Django.",
+        "grade": "Completado",
+        "url": "https://drive.google.com/file/d/1JvpfmvjXjAGXg818P36I9VPzW2egqMCe/view?usp=drive_link"
+      },
+      {
+        "id": 108,
+        "type": "course",
+        "title": "Inteligencia Emocional",
+        "institution": "Platzi",
+        "startDate": "2024",
+        "endDate": "2024",
+        "description": "Gestión emocional y desarrollo de habilidades interpersonales.",
+        "grade": "Completado",
+        "url": "https://drive.google.com/file/d/1wptw06Yp9cyrjA0ILLFbsCQF7pncPJiU/view?usp=drive_link"
+      },
+      {
+        "id": 109,
+        "type": "course",
+        "title": "React.js",
+        "institution": "Platzi",
+        "startDate": "2025",
+        "endDate": "2025",
+        "description": "Fundamentos de React, componentes, estado y ciclo de vida.",
+        "grade": "Completado",
+        "url": "https://drive.google.com/file/d/1NfP3dZ5p7za-Ky4FsxnlhrqCgij1hrSh/view?usp=drive_link"
+      }
+    ]
+  }
+]

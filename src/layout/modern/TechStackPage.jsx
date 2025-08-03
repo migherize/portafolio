@@ -1,17 +1,13 @@
-// src/pages/TechStackPage.jsx
-import { useEffect, useState } from "react";
 import TechStackList from "@/components/TechStackListCard/TechStackList.jsx";
 
-export default function TechStackPage() {
-  const [techStack, setTechStack] = useState([]);
-
-  useEffect(() => {
-    // Puedes reemplazar esto por fetch o import directo si tienes JSON local
-    fetch("/data/tech-stack.json")
-      .then((res) => res.json())
-      .then(setTechStack)
-      .catch((err) => console.error("Error cargando tech stack:", err));
-  }, []);
+export default function TechStackPage({ techStack }) {
+  if (!techStack || techStack.length === 0) {
+    return (
+      <section id="stack" className="py-20 text-center">
+        <p className="text-slate-400">Cargando stack tecnológico...</p>
+      </section>
+    );
+  }
 
   return (
     <section id="stack" className="py-20">

@@ -1,20 +1,6 @@
-import { useEffect, useState } from "react";
 import ExperienceList from "@/components/ExperienceListCard/ExperienceList.jsx";
 
-export default function ExperienceSection() {
-  const [experiences, setExperiences] = useState([]);
-
-  useEffect(() => {
-    fetch("/data/experiences.json")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setExperiences(data);
-      })
-      .catch((err) => console.error("Error cargando experiencias:", err));
-  }, []);
-  
+export default function ExperienceSection({ experiences = [] }) {
   return (
     <section id="experiencia" className="py-20 bg-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,4 +18,3 @@ export default function ExperienceSection() {
     </section>
   );
 }
-
