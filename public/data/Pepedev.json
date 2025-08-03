@@ -1,0 +1,32 @@
+[
+  {
+    "username": "Pepedev",
+    "type_portafolio": "modern",
+    "sharedProfile": {
+      "name": "Pepe Developer",
+      "heroSection": {
+        "title": "Frontend Developer",
+        "subtitle": "Creador de experiencias interactivas"
+      },
+      "aboutMe": {
+        "summary": "Desarrollador especializado en frontend con React y Vue.",
+        "location": "Valparaíso, Chile"
+      },
+      "socials": {
+        "github": "https://github.com/pepedev",
+        "linkedin": "https://linkedin.com/in/pepedev",
+        "email": "pepe@example.com",
+        "phone": "+56 9 1122 3344"
+      }
+    },
+    "techStack": [
+      { "name": "JavaScript", "level": "Avanzado" },
+      { "name": "React", "level": "Avanzado" },
+      { "name": "Vue", "level": "Intermedio" },
+      { "name": "CSS", "level": "Avanzado" }
+    ],
+    "experiences": [],
+    "projects": [],
+    "education": []
+  }
+]

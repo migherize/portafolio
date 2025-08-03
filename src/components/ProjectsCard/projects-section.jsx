@@ -30,9 +30,9 @@ export function ProjectsSection({ projects = [] }) {
               key={project.id}
               className="bg-slate-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl flex flex-col h-full"
             >
-              {project.imageUrl && (
+              {project.image && (
                 <img
-                  src={project.imageUrl}
+                  src={project.image}
                   alt={`Captura de pantalla de ${project.title}`}
                   className="w-full h-48 object-cover"
                 />

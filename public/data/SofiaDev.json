@@ -1,0 +1,31 @@
+[
+  {
+    "username": "SofiaDev",
+    "type_portafolio": "modern",
+    "sharedProfile": {
+      "name": "Sofía Dev",
+      "heroSection": {
+        "title": "Backend Engineer",
+        "subtitle": "Construyendo sistemas escalables"
+      },
+      "aboutMe": {
+        "summary": "Especialista en bases de datos, APIs y optimización de rendimiento.",
+        "location": "Buenos Aires, Argentina"
+      },
+      "socials": {
+        "github": "https://github.com/sofiadev",
+        "linkedin": "https://linkedin.com/in/sofiadev",
+        "email": "sofia@example.com",
+        "phone": "+54 9 223 456 789"
+      }
+    },
+    "techStack": [
+      { "name": "Go", "level": "Intermedio" },
+      { "name": "PostgreSQL", "level": "Avanzado" },
+      { "name": "Python", "level": "Intermedio" }
+    ],
+    "experiences": [],
+    "projects": [],
+    "education": []
+  }
+]

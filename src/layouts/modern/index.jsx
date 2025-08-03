@@ -37,10 +37,10 @@ export default function ModernLayout({ userData }) {
           <AboutMeSection aboutData={userData.about} />
         </section>
         <section id="stack" className="scroll-mt-24">
-          <TechStackPageSection techStack={userData.techStack} />
+          <TechStackPageSection techStack={userData.skills} />
         </section>
         <section id="experiencia" className="scroll-mt-24">
-          <ExperienceSection experiences={userData.experiences} />
+          <ExperienceSection experiences={userData.experience} />
         </section>
         <section id="projects" className="scroll-mt-24">
           <ProjectsSection projects={userData.projects} />

@@ -1,42 +1,40 @@
 [
   {
     "username": "MiguelHerize",
-    "type_portafolio": "modern",
-    "sharedProfile": {
-      "name": "Miguel Herize",
-      "role": "Backend Developer",
-      "description": "Apasionado por el código limpio y las APIs.",
-
-      "heroSection": {
-        "title": "Python Backend Developer | AWS | Data Engineer | Machine Learning Engineer",
-        "bio": "Desarrollador Python con 5 años de experiencia en backend, APIs y aplicaciones web. Especialista en Django, FastAPI y bases de datos, construyendo soluciones escalables con enfoque en microservicios y cloud.",
-        "profileImage": "/images/profile.jpeg",
-        "backgroundImage": "/images/1743778424500.png",
-        "resumeUrl": "/pdf/cv-miguel-herize.pdf"
-      },
-
-      "aboutMe": {
-        "aboutMe": [
-          "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes con más de 5 años de experiencia en desarrollo de software.",
-          "He trabajado en proyectos de backend y microservicios, principalmente con Python y frameworks como FastAPI y Django.",
-          "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas para construir software escalable y eficiente."
-        ],
-        "stats": [
-          { "label": "Proyectos", "value": "10+" },
-          { "label": "Años", "value": "5+" },
-          { "label": "Clientes", "value": "5+" },
-          { "label": "Tecnologías", "value": "20+" }
-        ],
-        "aboutImage": "/images/about.png"
+    "portfolioType": "modern",
+    "personalInfo": {
+      "fullName": "Miguel Herize",
+      "headline": "Python Backend Developer | AWS | Data Engineer | Machine Learning Engineer",
+      "shortBio": "Desarrollador Python con 5 años de experiencia en backend, APIs y aplicaciones web. Especialista en Django, FastAPI y bases de datos, construyendo soluciones escalables con enfoque en microservicios y cloud.",
+      "location": "Santiago, Chile",
+      "avatarUrl":  "/images/profile.jpeg",
+      "backgroundUrl": "/images/1743778424500.png",
+      "resumeUrl": "/pdf/cv-miguel-herize.pdf",
+      "websiteUrl": "https://migherize.github.io/portafolio-frontend",
+      "contact": {
+        "email": "migherize@gmail.com",
+        "phone": "+56956052252"
       },
       "socials": {
-        "email": "migherize@gmail.com",
-        "phone": "+56956052252",
-        "githubUrl": "https://github.com/migherize",
-        "linkedinUrl": "https://www.linkedin.com/in/miguel-herize-267764179/"
+        "github": "https://github.com/migherize",
+        "linkedin": "https://www.linkedin.com/in/miguel-herize-267764179/"
       }
     },
-    "techStack": [
+    "about": {
+    "description": [
+      "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes con más de 5 años de experiencia en desarrollo de software.",
+      "He trabajado en proyectos de backend y microservicios, principalmente con Python y frameworks como FastAPI y Django.",
+      "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas para construir software escalable y eficiente."
+    ],
+    "highlights":  [
+      { "label": "Proyectos", "value": "10+" },
+      { "label": "Años", "value": "5+" },
+      { "label": "Clientes", "value": "5+" },
+      { "label": "Tecnologías", "value": "20+" }
+    ],
+    "image": "/images/about.png"
+  },
+    "skills": [
       {
         "id": 1,
         "name": "Python",
@@ -294,7 +292,7 @@
         "color": "orange"
       }
     ],
-    "experiences": [
+    "experience": [
       {
         "id": 1,
         "title": "Python Software Engineer",
@@ -459,7 +457,7 @@
         "id": 3,
         "title": "API Academia de Magia",
         "description": "API para gestión de usuarios, inscripciones y operaciones CRUD en un sistema académico ficticio.",
-        "imageUrl": "/images/api-academia-magia.png",
+        "image": "/images/api-academia-magia.png",
         "demoUrl": "",
         "githubUrl": "https://github.com/migherize/Reino_del_Trebol",
         "technologies": [
@@ -473,7 +471,7 @@
         "id": 2,
         "title": "Webscraping de Turismo Madrid",
         "description": "Proyecto de webscraping sobre la web de turismo de Madrid usando Scrapy, Docker y MongoDB.",
-        "imageUrl": "/images/turismo-madrid.png",
+        "image": "/images/turismo-madrid.png",
         "demoUrl": "",
         "githubUrl": "https://github.com/migherize/TourismMadrid",
         "technologies": [
@@ -487,7 +485,7 @@
         "id": 3,
         "title": "Webscraping con Airflow",
         "description": "Monitoreo en Airflow para la ejecución y automatización de procesos de webscraping.",
-        "imageUrl": "/images/airflow-monitoring.jpeg",
+        "image": "/images/airflow-monitoring.jpeg",
         "demoUrl": "",
         "githubUrl": "https://gitlab.com/migherize/airflow-webscraping",
         "technologies": [
@@ -507,8 +505,8 @@
         "startDate": "2014",
         "endDate": "2022",
         "description": "Formación profesional en Ingeniería de Sistemas, enfocada en desarrollo de software, algoritmos y gestión de proyectos.",
-        "grade": "Sistemas Computacionales",
-        "url": "https://drive.google.com/file/d/13ezxHm30Civ1r-zTXCvxdWKSOJmmmVlG/view?usp=drive_link"
+        "field": "Sistemas Computacionales",
+        "certificateUrl": "https://drive.google.com/file/d/13ezxHm30Civ1r-zTXCvxdWKSOJmmmVlG/view?usp=drive_link"
       },
       {
         "id": 102,
@@ -518,8 +516,8 @@
         "startDate": "2024",
         "endDate": "2025",
         "description": "Programa intensivo especializado en Machine Learning, Deep Learning y despliegue de modelos en producción.",
-        "grade": "Machine Learning Engineer",
-        "url": "https://drive.google.com/file/d/13ezxHm30Civ1r-zTXCvxdWKSOJmmmVlG/view?usp=drive_link"
+        "field": "Machine Learning Engineer",
+        "certificateUrl": "https://drive.google.com/file/d/13ezxHm30Civ1r-zTXCvxdWKSOJmmmVlG/view?usp=drive_link"
       },
       {
         "id": 103,
@@ -529,8 +527,8 @@
         "startDate": "2025",
         "endDate": "Lifetime",
         "description": "Certificación oficial que valida habilidades en sintaxis básica, estructuras de datos y POO con Python.",
-        "grade": "Certificado Oficial",
-        "url": "https://verify.openedg.org/?id=82gO.YrwH.3cst"
+        "field": "Certificado Oficial",
+        "certificateUrl": "https://verify.openedg.org/?id=82gO.YrwH.3cst"
       },
       {
         "id": 102,
@@ -540,8 +538,8 @@
         "startDate": "2024",
         "endDate": "2024",
         "description": "Curso de backend con Python, FastAPI, bases de datos SQL/NoSQL, pruebas y principios SOLID.",
-        "grade": "Semi-Senior Level",
-        "url": "https://drive.google.com/file/d/1dOE4nfMfzREXLihfeXySEVefrYx5L9Z-/view?usp=sharing"
+        "field": "Semi-Senior Level",
+        "certificateUrl": "https://drive.google.com/file/d/1dOE4nfMfzREXLihfeXySEVefrYx5L9Z-/view?usp=sharing"
       },
       {
         "id": 103,
@@ -551,8 +549,8 @@
         "startDate": "2025",
         "endDate": "2025",
         "description": "Desarrolla habilidades emocionales para la gestión personal y profesional.",
-        "grade": "Completado",
-        "url": "https://www.udemy.com/certificate/UC-05239e5e-f42c-49c1-b142-35fcf38988d4/"
+        "field": "Completado",
+        "certificateUrl": "https://www.udemy.com/certificate/UC-05239e5e-f42c-49c1-b142-35fcf38988d4/"
       },
       {
         "id": 104,
@@ -562,8 +560,8 @@
         "startDate": "2025",
         "endDate": "2025",
         "description": "Curso preparatorio para obtener la certificación oficial PCAP en Python.",
-        "grade": "Completado",
-        "url": "https://www.udemy.com/certificate/UC-0e0c3065-3f3f-4cdf-9bab-82ea422f030a/"
+        "field": "Completado",
+        "certificateUrl": "https://www.udemy.com/certificate/UC-0e0c3065-3f3f-4cdf-9bab-82ea422f030a/"
       },
       {
         "id": 105,
@@ -573,8 +571,8 @@
         "startDate": "2023",
         "endDate": "2023",
         "description": "Evaluación de conocimientos en Python, estructuras de datos y POO.",
-        "grade": "Medium",
-        "url": "https://drive.google.com/file/d/1wxo_pUpVnLqm94gk-dfY4DKMMPEdFumL/view?usp=drive_link"
+        "field": "Medium",
+        "certificateUrl": "https://drive.google.com/file/d/1wxo_pUpVnLqm94gk-dfY4DKMMPEdFumL/view?usp=drive_link"
       },
       {
         "id": 106,
@@ -584,8 +582,8 @@
         "startDate": "2025",
         "endDate": "2025",
         "description": "Creación de APIs RESTful con Django REST Framework y mejores prácticas.",
-        "grade": "Completado",
-        "url": "https://drive.google.com/file/d/1jqpc52bH_XTK16fVzvDer9k64OPvRV3Y/view?usp=drive_link"
+        "field": "Completado",
+        "certificateUrl": "https://drive.google.com/file/d/1jqpc52bH_XTK16fVzvDer9k64OPvRV3Y/view?usp=drive_link"
       },
       {
         "id": 107,
@@ -595,8 +593,8 @@
         "startDate": "2025",
         "endDate": "2025",
         "description": "Curso práctico de desarrollo web completo con Django.",
-        "grade": "Completado",
-        "url": "https://drive.google.com/file/d/1JvpfmvjXjAGXg818P36I9VPzW2egqMCe/view?usp=drive_link"
+        "field": "Completado",
+        "certificateUrl": "https://drive.google.com/file/d/1JvpfmvjXjAGXg818P36I9VPzW2egqMCe/view?usp=drive_link"
       },
       {
         "id": 108,
@@ -606,8 +604,8 @@
         "startDate": "2024",
         "endDate": "2024",
         "description": "Gestión emocional y desarrollo de habilidades interpersonales.",
-        "grade": "Completado",
-        "url": "https://drive.google.com/file/d/1wptw06Yp9cyrjA0ILLFbsCQF7pncPJiU/view?usp=drive_link"
+        "field": "Completado",
+        "certificateUrl": "https://drive.google.com/file/d/1wptw06Yp9cyrjA0ILLFbsCQF7pncPJiU/view?usp=drive_link"
       },
       {
         "id": 109,
@@ -617,8 +615,8 @@
         "startDate": "2025",
         "endDate": "2025",
         "description": "Fundamentos de React, componentes, estado y ciclo de vida.",
-        "grade": "Completado",
-        "url": "https://drive.google.com/file/d/1NfP3dZ5p7za-Ky4FsxnlhrqCgij1hrSh/view?usp=drive_link"
+        "field": "Completado",
+        "certificateUrl": "https://drive.google.com/file/d/1NfP3dZ5p7za-Ky4FsxnlhrqCgij1hrSh/view?usp=drive_link"
       }
     ]
   }

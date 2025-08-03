@@ -67,23 +67,23 @@ export function EducationSection({ education = [] }) {
                     <p className="text-slate-300 text-xs line-clamp-2 mb-2">
                       {edu.description || " "}
                     </p>
-                    {edu.grade ? (
+                    {edu.field ? (
                       <p className="text-slate-400 text-xs mb-2">
-                        <span className="font-medium">Calificación:</span> {edu.grade}
+                        <span className="font-medium">Calificación:</span> {edu.field}
                       </p>
                     ) : (
                       <div className="mb-2 h-[16px]"></div>
                     )}
                   </div>
                 </div>
-                {edu.url ? (
+                {edu.certificateUrl ? (
                   <div className="mt-2 flex justify-end">
                     <Button
                       asChild
                       variant="outline"
                       className="text-xs h-8 px-3"
                     >
-                      <a href={edu.url} target="_blank" rel="noopener noreferrer">
+                      <a href={edu.certificateUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-3 w-3 mr-1" />
                         Ver Certificado
                       </a>
