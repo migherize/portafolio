@@ -7,9 +7,6 @@ export default function HeroSection({ name, heroData, socials }) {
     profileImage,
     backgroundImage,
     resumeUrl,
-    githubUrl,
-    linkedinUrl,
-    email,
   } = heroData;
 
   const scrollToProjects = () => {

@@ -3,5 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html, body {
-    @apply bg-slate-900 text-slate-300;
-  }
+  height: 100%;
+  margin: 0;
+}
