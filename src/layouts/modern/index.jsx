@@ -30,13 +30,11 @@ export default function ModernLayout({ userData }) {
       <main>
         <section id="inicio" className="scroll-mt-24">
           <HeroSection 
-          name={userData.sharedProfile.name} 
-          heroData={userData.sharedProfile.heroSection} 
-          socials={userData.sharedProfile.socials} 
+          heroData={userData.personalInfo} 
           />
         </section>
         <section id="about" className="scroll-mt-24">
-          <AboutMeSection aboutData={userData.sharedProfile.aboutMe} />
+          <AboutMeSection aboutData={userData.about} />
         </section>
         <section id="stack" className="scroll-mt-24">
           <TechStackPageSection techStack={userData.techStack} />
@@ -52,15 +50,15 @@ export default function ModernLayout({ userData }) {
         </section>
         <section id="contact" className="scroll-mt-24">
           <ContactSection 
-          phoneData={userData.sharedProfile.socials.phone}
-          emailData={userData.sharedProfile.socials.email} />
+          phoneData={userData.personalInfo.contact.phone}
+          emailData={userData.personalInfo.contact.email} />
         </section>
       </main>
 
       <section id="footer" className="scroll-mt-24">
         <FooterSection 
-          name={userData.sharedProfile.name} 
-          socials={userData.sharedProfile.socials} 
+          name={userData.personalInfo.fullName} 
+          socials={userData.personalInfo.socials} 
         />
       </section>
     </div>

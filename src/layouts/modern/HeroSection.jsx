@@ -1,12 +1,15 @@
 import HeroSectionCard from "@/components/HeroSectionCard/HeroSectionCard.jsx";
 
-export default function HeroSection({ name, heroData, socials }) {
+export default function HeroSection({ heroData }) {
   const {
-    title,
-    bio,
-    profileImage,
-    backgroundImage,
+    fullName,
+    headline,
+    shortBio,
+    avatarUrl,
+    backgroundUrl,
     resumeUrl,
+    socials,
+    contact,
   } = heroData;
 
   const scrollToProjects = () => {
@@ -16,14 +19,14 @@ export default function HeroSection({ name, heroData, socials }) {
   return (
     <section className="min-h-screen bg-white dark:bg-neutral-900 py-12 px-6 pt-16">
       <HeroSectionCard
-        name={name}
-        title={title}
-        bio={bio}
-        profileImage={profileImage}
-        backgroundImage={backgroundImage}
-        githubUrl={socials.githubUrl}
-        linkedinUrl={socials.linkedinUrl}
-        email={socials.email}
+        name={fullName}
+        title={headline}
+        bio={shortBio}
+        profileImage={avatarUrl}
+        backgroundImage={backgroundUrl}
+        githubUrl={socials.github}
+        linkedinUrl={socials.linkedin}
+        email={contact.email}
         resumeUrl={resumeUrl}
         onScrollToProjects={scrollToProjects}
       />

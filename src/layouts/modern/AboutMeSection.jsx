@@ -22,10 +22,10 @@ export default function AboutSection({ aboutData }) {
         </div>
 
         <AboutMeCard
-          aboutMe={aboutData?.aboutMe}
-          stats={aboutData?.stats}
+          aboutMe={aboutData?.description}
+          stats={aboutData?.highlights}
           image={
-            aboutData?.aboutImage ||
+            aboutData?.image ||
             "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=600"
           }
         />

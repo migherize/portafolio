@@ -2,7 +2,7 @@ import ClassicLayout from "./classic";
 import ModernLayout from "./modern";
 
 export default function LayoutFactory({ userData }) {
-  switch (userData.type_portafolio) {
+  switch (userData.portfolioType) {
     case "classic":
       return <ClassicLayout userData={userData} />;
     case "modern":
