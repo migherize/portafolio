@@ -1,0 +1,40 @@
+[
+  {
+    "username": "DummyUser",
+    "portfolioType": "classic",
+    "personalInfo": {
+      "fullName": "Dummy FullName",
+      "headline": "Dummy Headline",
+      "shortBio": "Esta es una biografía de ejemplo.",
+      "location": "Ciudad Ejemplo",
+      "avatarUrl": "",
+      "backgroundUrl": "",
+      "resumeUrl": "",
+      "websiteUrl": "",
+      "contact": {
+        "email": "dummy@example.com",
+        "phone": "+0000000000"
+      },
+      "socials": {
+        "github": "https://github.com/dummy",
+        "linkedin": "https://linkedin.com/in/dummy"
+      }
+    },
+    "about": {
+      "description": [
+        "Esto es una descripción dummy."
+      ],
+      "highlights": [
+        {
+          "label": "Proyectos",
+          "value": "5+"
+        }
+      ],
+      "image": ""
+    },
+    "skills": [],
+    "experience": [],
+    "projects": [],
+    "education": []
+  }
+]

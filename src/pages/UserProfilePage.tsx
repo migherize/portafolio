@@ -1,12 +1,13 @@
 "use client";
 
 import { useParams } from "react-router-dom";
-import LayoutFactory from "@/layouts/LauyoutFactory";
+import LayoutFactory from "@/layouts/LayoutFactory";
 import useFetchData from "@/hooks/useFetchData";
+import { UserProfile } from "@/types/schema";
 
 export default function UserProfilePage() {
   const { username } = useParams();
-  const { data: userProfiles, loading, error } = useFetchData(`/data/${username}.json`);
+  const { data: userProfiles, loading, error } = useFetchData<UserProfile[]>(`/data/${username}.json`);
 
   if (!username) return <p>Ruta sin username</p>;
   if (loading) return <p>Cargando perfil...</p>;

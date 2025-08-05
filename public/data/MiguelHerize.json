@@ -7,7 +7,7 @@
       "headline": "Python Backend Developer | AWS | Data Engineer | Machine Learning Engineer",
       "shortBio": "Desarrollador Python con 5 años de experiencia en backend, APIs y aplicaciones web. Especialista en Django, FastAPI y bases de datos, construyendo soluciones escalables con enfoque en microservicios y cloud.",
       "location": "Santiago, Chile",
-      "avatarUrl":  "/images/profile.jpeg",
+      "avatarUrl": "/images/profile.jpeg",
       "backgroundUrl": "/images/1743778424500.png",
       "resumeUrl": "/pdf/cv-miguel-herize.pdf",
       "websiteUrl": "https://migherize.github.io/portafolio-frontend",
@@ -21,19 +21,31 @@
       }
     },
     "about": {
-    "description": [
-      "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes con más de 5 años de experiencia en desarrollo de software.",
-      "He trabajado en proyectos de backend y microservicios, principalmente con Python y frameworks como FastAPI y Django.",
-      "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas para construir software escalable y eficiente."
-    ],
-    "highlights":  [
-      { "label": "Proyectos", "value": "10+" },
-      { "label": "Años", "value": "5+" },
-      { "label": "Clientes", "value": "5+" },
-      { "label": "Tecnologías", "value": "20+" }
-    ],
-    "image": "/images/about.png"
-  },
+      "description": [
+        "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes con más de 5 años de experiencia en desarrollo de software.",
+        "He trabajado en proyectos de backend y microservicios, principalmente con Python y frameworks como FastAPI y Django.",
+        "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas para construir software escalable y eficiente."
+      ],
+      "highlights": [
+        {
+          "label": "Proyectos",
+          "value": "10+"
+        },
+        {
+          "label": "Años",
+          "value": "5+"
+        },
+        {
+          "label": "Clientes",
+          "value": "5+"
+        },
+        {
+          "label": "Tecnologías",
+          "value": "20+"
+        }
+      ],
+      "image": "/images/about.png"
+    },
     "skills": [
       {
         "id": 1,
