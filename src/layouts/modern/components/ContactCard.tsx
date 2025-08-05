@@ -1,5 +1,5 @@
 import { Mail, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/layouts/modern/components/ui/button";
 import { useRef, useState } from "react";
 import { ContactData } from "@/types/schema";
 

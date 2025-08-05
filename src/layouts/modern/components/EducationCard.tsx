@@ -1,5 +1,5 @@
 import { GraduationCap, Award, Code, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/layouts/modern/components/ui/button";
 import { Education } from "@/types/schema";
 
 interface Props {

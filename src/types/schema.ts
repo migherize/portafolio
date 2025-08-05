@@ -13,7 +13,6 @@ export interface PersonalInfo {
   headline: string;
   shortBio: string;
   location: string;
-  avatarUrl: string;
   backgroundUrl: string;
   resumeUrl: string;
   websiteUrl: string;

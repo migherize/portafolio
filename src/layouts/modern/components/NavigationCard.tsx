@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/layouts/modern/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/layouts/modern/components/ui/sheet";
 
 type NavItem = {
   href: string;

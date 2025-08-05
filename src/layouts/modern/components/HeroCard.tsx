@@ -11,7 +11,6 @@ export default function HeroSectionCard({ heroData, onScrollToProjects }: HeroSe
     fullName,
     headline,
     shortBio,
-    avatarUrl,
     backgroundUrl,
     resumeUrl,
     socials,

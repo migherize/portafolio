@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useDarkMode from "@/hooks/useDarkMode";
+import useDarkMode from "@/layouts/modern/hooks/useDarkMode";
 import NavigationSection from "@/layouts/modern/sections/NavigationSection";
 import HeroSection from "@/layouts/modern/sections/HeroSection";
 import AboutMeSection from "@/layouts/modern/sections/AboutMeSection";

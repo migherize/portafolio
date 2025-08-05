@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/layouts/modern/components/ui/button";
 import { useState, useRef } from "react";
 import { FooterData } from "@/types/schema";
 interface FooterSectionProps {

@@ -2,7 +2,7 @@
 
 import { useParams } from "react-router-dom";
 import LayoutFactory from "@/layouts/LayoutFactory";
-import useFetchData from "@/hooks/useFetchData";
+import useFetchData from "@/layouts/modern/hooks/useFetchData";
 import { UserProfile } from "@/types/schema";
 
 export default function UserProfilePage() {

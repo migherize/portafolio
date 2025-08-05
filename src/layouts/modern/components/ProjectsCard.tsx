@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/layouts/modern/components/ui/button";
 import { Project } from "@/types/schema";
 
 interface Props {
