@@ -1,19 +1,25 @@
 import { useState, useEffect, useRef } from "react";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { PersonalInfo } from "@/types/schema";
+interface HeroSectionCardProps {
+  heroData: PersonalInfo;
+  onScrollToProjects: () => void;
+}
 
-export default function HeroSection({
-  name,
-  title,
-  bio,
-  backgroundImage,
-  githubUrl,
-  linkedinUrl,
-  email,
-  resumeUrl,
-  onScrollToProjects,
-}) {
+export default function HeroSectionCard({ heroData, onScrollToProjects }: HeroSectionCardProps) {
+  const {
+    fullName,
+    headline,
+    shortBio,
+    avatarUrl,
+    backgroundUrl,
+    resumeUrl,
+    socials,
+    contact,
+  } = heroData;
+
   const [showCopyMessage, setShowCopyMessage] = useState(false);
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<number | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -24,7 +30,7 @@ export default function HeroSection({
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText(email);
+    navigator.clipboard.writeText(contact.email);
     setShowCopyMessage(true);
 
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -40,7 +46,7 @@ export default function HeroSection({
       style={
         isDesktop
           ? {
-              backgroundImage: `url(${backgroundImage})`,
+              backgroundImage: `url(${backgroundUrl})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -53,13 +59,13 @@ export default function HeroSection({
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-4 px-4">
-      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">{name}</h1>
-        {title && (
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold">{fullName}</h1>
+        {headline && (
           <h2 className="text-1xl sm:text-3xl md:text-4xl font-semibold text-blue-400">
-            {title}
+            {headline}
           </h2>
         )}
-        <p className="text-lg sm:text-xl md:text-2xl text-gray-300">{bio}</p>
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-300">{shortBio}</p>
 
         {/* Botones */}
         <div className="flex gap-4 justify-center flex-wrap">
@@ -81,9 +87,9 @@ export default function HeroSection({
 
         {/* Redes Sociales */}
         <div className="flex justify-center space-x-6 mt-4 items-center relative">
-          {githubUrl && (
+          {socials.github && (
             <a
-              href={githubUrl}
+              href={socials.github}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition cursor-pointer"
@@ -91,9 +97,9 @@ export default function HeroSection({
               <Github className="w-8 h-8 " />
             </a>
           )}
-          {linkedinUrl && (
+          {socials.linkedin && (
             <a
-              href={linkedinUrl}
+              href={socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition cursor-pointer"
@@ -102,7 +108,7 @@ export default function HeroSection({
             </a>
           )}
 
-          {email && (
+          {contact.email && (
             <div className="relative flex items-center">
               <button
                 onClick={handleCopyEmail}

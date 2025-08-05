@@ -1,10 +1,19 @@
-export default function ExperienceList({ experiences = [] }) {
-  const getColorClass = (index) => {
+import { Experience } from "@/types/schema";
+import { ReactNode } from "react";
+
+interface Props {
+  experiences: Experience[];
+}
+
+type Align = "left" | "right";
+
+export default function ExperienceList({ experiences }: Props) {
+  const getColorClass = (index: number) => {
     const colors = ["bg-blue-500", "bg-purple-500", "bg-green-500"];
     return colors[index % colors.length];
   };
 
-  const getTextColorClass = (index) => {
+  const getTextColorClass = (index: number) => {
     const colors = ["text-blue-400", "text-purple-400", "text-green-400"];
     return colors[index % colors.length];
   };
@@ -17,10 +26,15 @@ export default function ExperienceList({ experiences = [] }) {
     );
   }
 
-  const workExperiences = experiences.filter((exp) => exp.type === "work");
-  const educationExperiences = experiences.filter((exp) => exp.type === "education");
-
-  const renderExperienceCard = (exp, index, align = "left") => (
+  const workExperiences = experiences.filter(
+    (exp: Experience) => exp.type === "work"
+  );
+  
+  const educationExperiences = experiences.filter(
+    (exp: Experience) => exp.type === "education"
+  );
+  
+  const renderExperienceCard = (exp: Experience, index: number, align: Align): ReactNode => (
     <div key={exp.id || index} className="relative mb-8 flex items-start gap-4">
       {align === "left" && (
         <>
@@ -108,7 +122,7 @@ export default function ExperienceList({ experiences = [] }) {
       <div className="md:col-span-1 text-right">
         <h2 className="text-2xl font-bold text-purple-400 mb-6">Educación</h2>
         {educationExperiences.length > 0 ? (
-          educationExperiences.map((exp, index) =>
+          educationExperiences.map((exp: Experience, index: number) =>
             renderExperienceCard(exp, index, "right")
           )
         ) : (
@@ -120,7 +134,7 @@ export default function ExperienceList({ experiences = [] }) {
       <div className="md:col-span-1 text-left">
         <h2 className="text-2xl font-bold text-blue-400 mb-6">Experiencia</h2>
         {workExperiences.length > 0 ? (
-          workExperiences.map((exp, index) =>
+          workExperiences.map((exp: Experience, index: number) =>
             renderExperienceCard(exp, index, "left")
           )
         ) : (

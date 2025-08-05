@@ -1,12 +1,18 @@
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
+import { ContactData } from "@/types/schema";
 
-export function ContactSection({ data }) {
+interface ContactSectionProps {
+  data: ContactData;
+}
+
+
+export function ContactSection({ data }: ContactSectionProps) {
   const [copiedText, setCopiedText] = useState("");
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<number | null>(null);
 
-  const handleCopyToClipboard = (text, label) => {
+  const handleCopyToClipboard = (text: string | undefined, label: string) => {
     if (!text) {
       alert("Información no disponible.");
       return;
@@ -15,10 +21,12 @@ export function ContactSection({ data }) {
     navigator.clipboard.writeText(text);
     setCopiedText(label);
 
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-
-    timeoutRef.current = setTimeout(() => {
+    if (timeoutRef.current !== null) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = window.setTimeout(() => {
       setCopiedText("");
+      timeoutRef.current = null; 
     }, 3000);
   };
 
@@ -35,7 +43,7 @@ export function ContactSection({ data }) {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
-            onClick={() => handleCopyToClipboard(data?.phone, "Teléfono")}
+            onClick={() => handleCopyToClipboard(data.phone, "Teléfono")}
             className="bg-gradient-to-r from-blue-600 to-gray-600 hover:from-blue-700 hover:to-gray-700 text-white px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             <Phone className="w-4 h-4 mr-2" />
@@ -44,7 +52,7 @@ export function ContactSection({ data }) {
 
           <Button
             variant="outline"
-            onClick={() => handleCopyToClipboard(data?.email, "Email")}
+            onClick={() => handleCopyToClipboard(data.email, "Email")}
             className="border-slate-400 hover:border-blue-400 text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-all duration-300"
           >
             <Mail className="w-4 h-4 mr-2" />

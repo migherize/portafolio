@@ -1,13 +1,19 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Project } from "@/types/schema";
 
-export function ProjectsSection({ projects = [] }) {
-  const getColorClass = (index) => {
+interface Props {
+  projects: Project[];
+  allProjects?: string;
+}
+
+export function ProjectsSection({ projects, allProjects }: Props) {
+  const getColorClass = (index: number): string => {
     const colors = ["text-blue-400", "text-purple-400", "text-green-400"];
     return colors[index % colors.length];
   };
 
-  const getBgColorClass = (index) => {
+  const getBgColorClass = (index: number): string => {
     const colors = ["bg-blue-600/20", "bg-purple-600/20", "bg-green-600/20"];
     return colors[index % colors.length];
   };
@@ -88,6 +94,24 @@ export function ProjectsSection({ projects = [] }) {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <a
+            href={allProjects}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <Github className="h-5 w-5" />
+              Ver todos los proyectos
+              <ExternalLink className="h-4 w-4" />
+            </Button>
+          </a>
+
         </div>
       </div>
     </section>

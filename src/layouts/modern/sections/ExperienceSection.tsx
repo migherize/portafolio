@@ -1,6 +1,10 @@
-import ExperienceList from "@/components/ExperienceCard/ExperienceCard.jsx";
+import ExperienceList from "@/layouts/modern/components/ExperienceCard";
+import { Experience } from "@/types/schema";
+interface Props {
+  experiences: Experience[];
+}
 
-export default function ExperienceSection({ experiences = [] }) {
+export default function ExperienceSection({ experiences }: Props) {
   return (
     <section id="experiencia" className="py-20 bg-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

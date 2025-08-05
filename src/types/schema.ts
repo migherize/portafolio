@@ -82,3 +82,14 @@ export interface Education {
   certificateUrl: string;
 }
 
+export interface ContactData {
+  phone: string;  
+  email: string;  
+}
+
+export interface FooterData {
+  name: string;
+  email: string;
+  githubUrl:string;
+  linkedinUrl: string;
+}

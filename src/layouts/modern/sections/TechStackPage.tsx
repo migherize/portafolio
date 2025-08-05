@@ -1,6 +1,10 @@
-import TechStackList from "@/components/TechStackCard/TechStackCard.jsx";
+import TechStackList from "@/layouts/modern/components/TechStackCard";
+import { Skill } from "@/types/schema";
+interface Props {
+  techStack: Skill[];
+}
 
-export default function TechStackPage({ techStack }) {
+export default function TechStackPage({ techStack }: Props) {
   if (!techStack || techStack.length === 0) {
     return (
       <section id="stack" className="py-20 text-center">

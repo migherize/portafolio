@@ -1,10 +1,13 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
-
-export function Footer({ data }) {
+import { FooterData } from "@/types/schema";
+interface FooterSectionProps {
+  data: FooterData;
+}
+export function Footer({ data }: FooterSectionProps) {
   const [showCopyMessage, setShowCopyMessage] = useState(false);
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<number | null>(null);
 
   const handleCopyEmail = () => {
     if (!data.email) return;

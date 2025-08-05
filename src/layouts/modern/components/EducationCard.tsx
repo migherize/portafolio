@@ -1,5 +1,10 @@
 import { GraduationCap, Award, Code, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Education } from "@/types/schema";
+
+interface Props {
+  education: Education[];
+}
 
 const iconMap = {
   degree: GraduationCap,
@@ -25,7 +30,7 @@ const textColorMap = {
   course: "text-purple-400",
 };
 
-export function EducationSection({ education = [] }) {
+export function EducationSection({ education }: Props) {
   return (
     <section id="formacion" className="py-20 bg-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

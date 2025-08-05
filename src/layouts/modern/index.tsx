@@ -1,14 +1,14 @@
 import { useEffect } from "react";
 import useDarkMode from "@/hooks/useDarkMode";
 import NavigationSection from "@/layouts/modern/sections/NavigationSection";
-import HeroSection from "@/layouts/modern/HeroSection";
-import AboutMeSection from "@/layouts/modern/AboutMeSection";
-import TechStackPageSection from "@/layouts/modern/TechStackPage";
-import ExperienceSection from "@/layouts/modern/ExperienceSection";
-import ProjectsSection from "@/layouts/modern/ProjectsSection";
-import EducationSection from "@/layouts/modern/EducationSection";
-import ContactSection from "@/layouts/modern/ContactSection";
-import FooterSection from "@/layouts/modern/FooterSection";
+import HeroSection from "@/layouts/modern/sections/HeroSection";
+import AboutMeSection from "@/layouts/modern/sections/AboutMeSection";
+import TechStackPageSection from "@/layouts/modern/sections/TechStackPage";
+import ExperienceSection from "@/layouts/modern/sections/ExperienceSection";
+import ProjectsSection from "@/layouts/modern/sections/ProjectsSection";
+import EducationSection from "@/layouts/modern/sections/EducationSection";
+import ContactSection from "@/layouts/modern/sections/ContactSection";
+import FooterSection from "@/layouts/modern/sections/FooterSection";
 
 import { UserProfile } from "@/types/schema";
 
@@ -49,15 +49,17 @@ export default function ModernLayout({ userData }: ModernLayoutProps) {
           <ExperienceSection experiences={userData.experience} />
         </section>
         <section id="projects" className="scroll-mt-24">
-          <ProjectsSection projects={userData.projects} />
+          <ProjectsSection 
+          projects={userData.projects} 
+          allProjects={userData.personalInfo.socials.github}/>
         </section>
         <section id="education" className="scroll-mt-24">
           <EducationSection education={userData.education} />
         </section>
         <section id="contact" className="scroll-mt-24">
           <ContactSection 
-          phoneData={userData.personalInfo.contact.phone}
-          emailData={userData.personalInfo.contact.email} />
+          phone={userData.personalInfo.contact.phone}
+          email={userData.personalInfo.contact.email} />
         </section>
       </main>
 
@@ -65,6 +67,7 @@ export default function ModernLayout({ userData }: ModernLayoutProps) {
         <FooterSection 
           name={userData.personalInfo.fullName} 
           socials={userData.personalInfo.socials} 
+          contact={userData.personalInfo.contact} 
         />
       </section>
     </div>

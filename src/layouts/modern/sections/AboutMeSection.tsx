@@ -1,6 +1,10 @@
-import AboutMeCard from "@/components/AboutMeCard/AboutMeCard.jsx";
+import AboutMeCard from "@/layouts/modern/components/AboutMeCard";
+import { AboutMe } from "@/types/schema";
+interface Props {
+  aboutData: AboutMe;
+}
 
-export default function AboutSection({ aboutData }) {
+export default function AboutSection({ aboutData }: Props) {
   if (!aboutData) {
     return (
       <section id="about" className="py-20 bg-slate-800/50 text-center text-white">
@@ -22,10 +26,10 @@ export default function AboutSection({ aboutData }) {
         </div>
 
         <AboutMeCard
-          aboutMe={aboutData?.description}
-          stats={aboutData?.highlights}
+          aboutMe={aboutData.description}
+          stats={aboutData.highlights}
           image={
-            aboutData?.image ||
+            aboutData.image ||
             "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=600"
           }
         />

@@ -1,4 +1,27 @@
-export default function AboutMeCard({ aboutMe = [], stats, image }) {
+interface Stat {
+  label: string;
+  value: string;
+}
+
+interface StatsObject {
+  projects?: string;
+  experience?: string;
+  clients?: string;
+  technologies?: string;
+}
+
+interface AboutMeCardProps {
+  aboutMe: string[];
+  stats: Stat[] | StatsObject | null;
+  image: string;
+}
+
+interface StatCardProps {
+  label: string;
+  value: string;
+}
+
+export default function AboutMeCard({ aboutMe, stats, image }: AboutMeCardProps) {
   const statsArray = Array.isArray(stats)
     ? stats
     : stats
@@ -38,7 +61,7 @@ export default function AboutMeCard({ aboutMe = [], stats, image }) {
   );
 }
 
-function StatCard({ label, value }) {
+function StatCard({ label, value }: StatCardProps) {
   return (
     <div className="bg-slate-700/50 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors">
       <div className="text-3xl font-bold text-blue-400 mb-1">{value}</div>
