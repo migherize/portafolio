@@ -1,4 +1,4 @@
-import TechStackList from "@/components/TechStackListCard/TechStackList.jsx";
+import TechStackList from "@/components/TechStackCard/TechStackCard.jsx";
 
 export default function TechStackPage({ techStack }) {
   if (!techStack || techStack.length === 0) {

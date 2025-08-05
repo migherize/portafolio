@@ -1,4 +1,3 @@
-// src/components/TechStackList.jsx
 import {
     Code,
     Layers,

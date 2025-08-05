@@ -1,6 +1,6 @@
 "use client";
 
-import { ContactSection } from "@/components/ContactCard/contact-section";
+import { ContactSection } from "@/components/ContactCard/ContactCard";
 
 export default function ContactSectionPage({ phoneData, emailData }) {
   if (!phoneData || !emailData) return null;

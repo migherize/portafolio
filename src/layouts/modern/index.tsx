@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import useDarkMode from "@/hooks/useDarkMode";
-import { Navigation } from "@/components/Navigation/Navigation";
+import { Navigation } from "@/components/NavigationCard/NavigationCard";
 import HeroSection from "@/layouts/modern/HeroSection";
 import AboutMeSection from "@/layouts/modern/AboutMeSection";
 import TechStackPageSection from "@/layouts/modern/TechStackPage";

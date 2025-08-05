@@ -1,6 +1,6 @@
 "use client";
 
-import { ProjectsSection } from "@/components/ProjectsCard/projects-section";
+import { ProjectsSection } from "@/components/ProjectsCard/ProjectsCard";
 
 export default function ProjectsSectionPage({ projects = [] }) {
   if (!projects.length) return null;

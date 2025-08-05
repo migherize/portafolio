@@ -1,6 +1,6 @@
 "use client";
 
-import { Footer } from "@/components/footerCard/footer";
+import { Footer } from "@/components/footerCard/footerCard";
 
 export default function FooterSection({ name, socials }) {
   if (!name || !socials) return null;

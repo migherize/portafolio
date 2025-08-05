@@ -1,4 +1,4 @@
-import ExperienceList from "@/components/ExperienceListCard/ExperienceList.jsx";
+import ExperienceList from "@/components/ExperienceCard/ExperienceCard.jsx";
 
 export default function ExperienceSection({ experiences = [] }) {
   return (
