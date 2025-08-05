@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import useDarkMode from "@/hooks/useDarkMode";
-import { Navigation } from "@/components/NavigationCard/NavigationCard";
+import NavigationSection from "@/layouts/modern/sections/NavigationSection";
 import HeroSection from "@/layouts/modern/HeroSection";
 import AboutMeSection from "@/layouts/modern/AboutMeSection";
 import TechStackPageSection from "@/layouts/modern/TechStackPage";
@@ -32,7 +32,7 @@ export default function ModernLayout({ userData }: ModernLayoutProps) {
     return (
     <div className="min-h-screen h-full bg-slate-900 text-slate-300 overflow-x-hidden">
 
-      <Navigation />
+      <NavigationSection />
       <main>
         <section id="inicio" className="scroll-mt-24">
           <HeroSection 

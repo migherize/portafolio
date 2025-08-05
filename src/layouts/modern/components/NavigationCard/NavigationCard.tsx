@@ -5,7 +5,12 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-const navItems = [
+type NavItem = {
+  href: string;
+  label: string;
+};
+
+const navItems: NavItem[] = [
   { href: "#inicio", label: "Inicio" },
   { href: "#about", label: "Sobre mí" },
   { href: "#stack", label: "Stack" },
@@ -44,7 +49,7 @@ export function Navigation() {
     return () => observer.disconnect();
   }, []);
 
-  const scrollToSection = (href) => {
+  const scrollToSection = (href: string) => {
     const section = document.getElementById(href.slice(1));
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
