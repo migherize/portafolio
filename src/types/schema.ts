@@ -35,14 +35,53 @@ export interface AboutMe {
   highlights: { label: string; value: string }[];
   image: string;
 }
+export type TechCategory = "frontend" | "backend" | "database" | "tools";
+export type TechLevel = "senior" | "semi-senior" | "junior";
+export type TechIconKey =
+  | "python"
+  | "java"
+  | "javascript"
+  | "react"
+  | "django"
+  | "fastapi"
+  | "scrapy"
+  | "springboot"
+  | "graphql"
+  | "kafka"
+  | "lambda"
+  | "airflow"
+  | "mongodb"
+  | "mysql"
+  | "postgresql"
+  | "dynamodb"
+  | "secretsmanager"
+  | "ecs"
+  | "fargate"
+  | "elasticloadbalancing"
+  | "dynatrace"
+  | "cloudwatch"
+  | "vue"
+  | "css"
+  | "typescript"
+  | "html"
+  | "visualstudiocode"
+  | "git"
+  | "jenkins"
+  | "postman"
+  | "docker"
+  | "selenium"
+  | "aws"
+  | "nodejs"
+
+export type TechColor = "blue" | "green" | "purple" | "orange";
 
 export interface Skill {
   id: number;
   name: string;
-  category: string;
-  level: "junior" | "semi-senior" | "senior";
-  icon: string;
-  color: string;
+  category: TechCategory;
+  level: TechLevel;
+  icon: TechIconKey;
+  color: TechColor;
 }
 
 export interface Experience {
@@ -55,6 +94,7 @@ export interface Experience {
   description: string;
   technologies: string[];
   achievements?: string[];
+  link?: string;
 }
 
 export interface Project {

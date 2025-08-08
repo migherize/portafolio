@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Folder } from "lucide-react";
 import { PersonalInfo } from "@/types/schema";
 interface HeroSectionCardProps {
   heroData: PersonalInfo;
@@ -78,8 +78,9 @@ export default function HeroSectionCard({ heroData, onScrollToProjects }: HeroSe
           </a>
           <button
             onClick={onScrollToProjects}
-            className="bg-transparent hover:bg-blue-700 text-white hover:text-white px-6 py-2 rounded-lg border border-white hover:border-blue-700 transition"
+            className="flex items-center bg-transparent hover:bg-blue-700 text-white hover:text-white px-6 py-2 rounded-lg border border-white hover:border-blue-700 transition"
           >
+            <Folder className="w-4 h-4 mr-2" />
             Ver Proyectos
           </button>
         </div>

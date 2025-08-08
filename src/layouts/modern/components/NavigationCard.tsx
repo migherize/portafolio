@@ -1,23 +1,24 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
 import { Button } from "@/layouts/modern/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/layouts/modern/components/ui/sheet";
+import { Menu, Home, User, Layers, Briefcase, Folder, GraduationCap, Mail } from "lucide-react";
 
 type NavItem = {
   href: string;
   label: string;
+  icon: React.ReactNode;
 };
 
 const navItems: NavItem[] = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#about", label: "Sobre mí" },
-  { href: "#stack", label: "Stack" },
-  { href: "#experiencia", label: "Experiencia" },
-  { href: "#projects", label: "Proyectos" },
-  { href: "#formacion", label: "Formación" },
-  { href: "#contact", label: "Contact" },
+  { href: "#inicio", label: "Inicio", icon: <Home className="w-4 h-4 mr-2" /> },
+  { href: "#about", label: "Sobre mí", icon: <User className="w-4 h-4 mr-2" /> },
+  { href: "#stack", label: "Stack", icon: <Layers className="w-4 h-4 mr-2" /> },
+  { href: "#experiencia", label: "Experiencia", icon: <Briefcase className="w-4 h-4 mr-2" /> },
+  { href: "#projects", label: "Proyectos", icon: <Folder className="w-4 h-4 mr-2" /> },
+  { href: "#formacion", label: "Formación", icon: <GraduationCap className="w-4 h-4 mr-2" /> },
+  { href: "#contact", label: "Contacto", icon: <Mail className="w-4 h-4 mr-2" /> },
 ];
 
 export function Navigation() {
@@ -71,19 +72,20 @@ export function Navigation() {
 
           {/* Desktop */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map(({ href, label }) => (
-              <button
-                key={href}
-                onClick={() => scrollToSection(href)}
-                className={`transition-colors duration-300 ${
-                  activeSection === href.slice(1)
-                    ? "text-blue-400"
-                    : "text-slate-300 hover:text-blue-400"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+          {navItems.map(({ href, label, icon }) => (
+            <button
+              key={href}
+              onClick={() => scrollToSection(href)}
+              className={`flex items-center transition-colors duration-300 ${
+                activeSection === href.slice(1)
+                  ? "text-blue-400"
+                  : "text-slate-300 hover:text-blue-400"
+              }`}
+            >
+              {icon}
+              {label}
+            </button>
+          ))}
           </div>
 
           {/* Mobile */}
@@ -96,22 +98,20 @@ export function Navigation() {
               </SheetTrigger>
               <SheetContent side="right" className="bg-slate-900 border-slate-800">
                 <div className="flex flex-col space-y-6 mt-8">
-                  {navItems.map(({ href, label }) => (
-                    <button
-                      key={href}
-                      onClick={() => {
-                        scrollToSection(href);
-                        setIsOpen(false);
-                      }}
-                      className={`text-left transition-colors duration-300 ${
-                        activeSection === href.slice(1)
-                          ? "text-blue-400"
-                          : "text-slate-300 hover:text-blue-400"
-                      }`}
-                    >
-                      {label}
-                    </button>
-                  ))}
+                {navItems.map(({ href, label, icon }) => (
+                  <button
+                    key={href}
+                    onClick={() => scrollToSection(href)}
+                    className={`flex items-center transition-colors duration-300 ${
+                      activeSection === href.slice(1)
+                        ? "text-blue-400"
+                        : "text-slate-300 hover:text-blue-400"
+                    }`}
+                  >
+                    {icon}
+                    {label}
+                  </button>
+                ))}
                 </div>
               </SheetContent>
             </Sheet>

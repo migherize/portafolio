@@ -1,5 +1,6 @@
 import TechStackList from "@/layouts/modern/components/TechStackCard";
 import { Skill } from "@/types/schema";
+
 interface Props {
   techStack: Skill[];
 }

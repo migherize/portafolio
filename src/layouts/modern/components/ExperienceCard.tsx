@@ -1,5 +1,6 @@
 import { Experience } from "@/types/schema";
 import { ReactNode } from "react";
+import { Briefcase, Building2 } from "lucide-react";
 
 interface Props {
   experiences: Experience[];
@@ -51,11 +52,23 @@ export default function ExperienceList({ experiences }: Props) {
   
           {/* Contenido */}
           <div className="bg-slate-700 rounded-lg p-3 hover:bg-slate-600 transition-colors duration-300 w-full text-left">
-            <h3 className={`text-base font-bold ${getTextColorClass(index)}`}>
+            <h3 className={`text-base font-bold flex items-center gap-2 ${getTextColorClass(index)}`}>
+              <Briefcase className="w-4 h-4 text-blue-400" />
               {exp.title}
             </h3>
-            <h4 className="text-sm font-semibold text-slate-300">{exp.company}</h4>
-            <p className="text-slate-400 text-xs">{exp.description}</p>
+
+            <h4 className="text-sm font-semibold text-slate-300 flex items-center gap-2">
+              <Building2 className="w-4 h-4 text-purple-400" />
+              {exp.link ? (
+                <a href={exp.link} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-300">
+                  {exp.company}
+                </a>
+              ) : (
+                exp.company
+              )}
+            </h4>
+
+            <p className="text-slate-400 text-xs mt-3">{exp.description}</p>
   
             {Array.isArray(exp.technologies) && exp.technologies.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-2">
@@ -77,11 +90,24 @@ export default function ExperienceList({ experiences }: Props) {
         <>
           {/* Contenido */}
           <div className="bg-slate-700 rounded-lg p-3 hover:bg-slate-600 transition-colors duration-300 w-full text-right">
-            <h3 className={`text-base font-bold ${getTextColorClass(index)}`}>
-              {exp.title}
-            </h3>
-            <h4 className="text-sm font-semibold text-slate-300">{exp.company}</h4>
-            <p className="text-slate-400 text-xs">{exp.description}</p>
+          <h3 className={`text-base font-bold flex items-center gap-2 justify-end ${getTextColorClass(index)}`}>
+            <span>{exp.title}</span>
+            <Briefcase className="w-4 h-4 text-blue-400" />
+          </h3>
+
+          {/* Empresa con ícono y link si existe */}
+          <h4 className="text-sm font-semibold text-slate-300 flex items-center gap-2 justify-end">
+            {exp.link ? (
+              <a href={exp.link} target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-300">
+                {exp.company}
+              </a>
+            ) : (
+              exp.company
+            )}
+            <Building2 className="w-4 h-4 text-purple-400" />
+          </h4>
+            
+            <p className="text-slate-400 text-xs mt-3">{exp.description}</p>
   
             {Array.isArray(exp.technologies) && exp.technologies.length > 0 && (
               <div className="flex flex-wrap gap-2 mt-2 justify-end">
