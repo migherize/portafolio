@@ -55,6 +55,7 @@ export interface Experience {
   description: string;
   technologies: string[];
   achievements?: string[];
+  link?: string;
 }
 
 export interface Project {

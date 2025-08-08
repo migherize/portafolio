@@ -1,35 +1,120 @@
-import {
-  Code,
-  Layers,
-  Paintbrush,
-  Server,
-  Zap,
-  Shield,
-  Database,
-  HardDrive,
-  Archive,
-  GitBranch,
-  Package,
-  Cloud,
-} from "lucide-react";
+
 import { ReactNode } from "react";
+import { FaPython, 
+  FaJava, 
+  FaJs, 
+  FaReact, 
+  FaNodeJs,
+  FaDocker,
+  FaVuejs,
+  FaCss3Alt,
+  FaHtml5,
+  FaGitAlt,
+  FaJenkins,
+  FaChessKnight,
+  FaChessKing,
+  FaChessPawn,
+} from "react-icons/fa";
+import { SiFastapi, 
+  SiDjango, 
+  SiScrapy, 
+  SiSpringboot, 
+  SiSelenium,
+  SiGraphql,
+  SiApachekafka,
+  SiAwslambda,
+  SiApacheairflow,
+  SiMongodb,
+  SiAmazondynamodb,
+  SiAwssecretsmanager,
+  SiAwsorganizations,
+  SiAwsfargate,
+  SiAwselasticloadbalancing,
+  SiDynatrace,
+  SiAmazoncloudwatch,
+  SiTypescript,
+  SiPostman
+} from "react-icons/si";
+
+import { DiMysql, DiVisualstudio } from "react-icons/di";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export type TechCategory = "frontend" | "backend" | "database" | "tools";
 export type TechLevel = "senior" | "semi-senior" | "junior";
 export type TechIconKey =
-  | "code"
-  | "layers"
-  | "paintbrush"
-  | "server"
-  | "zap"
-  | "shield"
-  | "database"
-  | "hard-drive"
-  | "archive"
-  | "git-branch"
-  | "package"
-  | "cloud";
-export type TechColor = "blue" | "green" | "purple" | "orange";
+  | "python"
+  | "java"
+  | "javascript"
+  | "react"
+  | "django"
+  | "fastapi"
+  | "scrapy"
+  | "springboot"
+  | "graphql"
+  | "kafka"
+  | "lambda"
+  | "airflow"
+  | "mongodb"
+  | "mysql"
+  | "postgresql"
+  | "dynamodb"
+  | "secretsmanager"
+  | "ecs"
+  | "fargate"
+  | "elasticloadbalancing"
+  | "dynatrace"
+  | "cloudwatch"
+  | "vue"
+  | "css"
+  | "typescript"
+  | "html"
+  | "visualstudiocode"
+  | "git"
+  | "jenkins"
+  | "postman"
+  | "docker"
+  | "selenium"
+  | "aws"
+  | "nodejs"
+
+  export type TechColor = "blue" | "green" | "purple" | "orange";
+
+const iconMap: Record<string, React.ElementType> = {
+  python: FaPython,
+  java: FaJava,
+  javascript: FaJs,
+  react: FaReact,
+  django: SiDjango,
+  fastapi: SiFastapi,
+  scrapy: SiScrapy,
+  springboot: SiSpringboot,
+  graphql: SiGraphql,
+  kafka: SiApachekafka,
+  lambda: SiAwslambda,
+  airflow: SiApacheairflow,
+  mongodb: SiMongodb,
+  mysql: DiMysql,
+  postgresql: BiLogoPostgresql,
+  dynamodb: SiAmazondynamodb,
+  secretsmanager: SiAwssecretsmanager,
+  ecs: SiAwsorganizations,
+  fargate: SiAwsfargate,
+  elasticloadbalancing: SiAwselasticloadbalancing,
+  dynatrace: SiDynatrace,
+  cloudwatch: SiAmazoncloudwatch,
+  vue: FaVuejs,
+  css: FaCss3Alt,
+  typescript: SiTypescript,
+  html: FaHtml5,
+  visualstudiocode: DiVisualstudio,
+  git: FaGitAlt,
+  jenkins: FaJenkins,
+  postman: SiPostman,
+  docker: FaDocker,
+  selenium: SiSelenium,
+  aws: SiAwsorganizations,
+  nodejs: FaNodeJs,
+};
 
 export interface Tech {
   id: number | string;
@@ -39,21 +124,6 @@ export interface Tech {
   icon: TechIconKey;
   color: TechColor;
 }
-
-const iconMap: Record<TechIconKey, React.ComponentType<any>> = {
-  code: Code,
-  layers: Layers,
-  paintbrush: Paintbrush,
-  server: Server,
-  zap: Zap,
-  shield: Shield,
-  database: Database,
-  "hard-drive": HardDrive,
-  archive: Archive,
-  "git-branch": GitBranch,
-  package: Package,
-  cloud: Cloud,
-};
 
 const colorMap: Record<TechColor, string> = {
   blue: "text-blue-400",
@@ -75,16 +145,16 @@ const levelClasses: Record<TechLevel, string> = {
 };
 
 const levelIcons: Record<TechLevel, ReactNode> = {
-  senior: <span style={{ fontSize: "1.8rem" }}>♔</span>,
-  "semi-senior": <span style={{ fontSize: "1.6rem" }}>♞</span>,
-  junior: <span style={{ fontSize: "1.4rem" }}>♙</span>,
+  senior: <FaChessKing style={{ fontSize: "1.8rem" }} />,
+  "semi-senior": <FaChessKnight style={{ fontSize: "1.6rem" }} />,
+  junior: <FaChessPawn style={{ fontSize: "1.4rem" }} />,
 };
 
 const categoryTitles: Record<TechCategory, string> = {
   frontend: "Frontend",
   backend: "Backend",
-  database: "Base de Datos",
-  tools: "Herramientas",
+  database: "Database",
+  tools: "Tools & DevOps",
 };
 
 const categoryColors: Record<TechCategory, string> = {
@@ -107,6 +177,7 @@ function LevelTitle({ level }: LevelTitleProps) {
     </h4>
   );
 }
+
 
 interface Props {
   techStack: Tech[];
@@ -150,7 +221,7 @@ export default function TechStackList({ techStack }: Props) {
                   <LevelTitle level={level} />
                   <div className="grid grid-cols-2 gap-4">
                     {techs.map((tech) => {
-                      const IconComponent = iconMap[tech.icon];
+                      const IconComponent = iconMap[tech.icon.toLowerCase()];
                       const iconColor = colorMap[tech.color] || "text-white";
 
                       return (
@@ -159,9 +230,7 @@ export default function TechStackList({ techStack }: Props) {
                           className="bg-slate-800 rounded-lg p-4 hover:bg-slate-700 transition-all duration-300 hover:scale-105 cursor-pointer flex flex-col items-center"
                         >
                           {IconComponent && (
-                            <IconComponent
-                              className={`h-8 w-8 mb-2 ${iconColor}`}
-                            />
+                            <IconComponent className={`h-8 w-8 mb-2 ${iconColor}`} />
                           )}
                           <div className="font-medium text-center">{tech.name}</div>
                         </div>

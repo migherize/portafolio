@@ -7,7 +7,7 @@
       "headline": "Python Backend Developer | AWS | Data Engineer | Machine Learning Engineer",
       "shortBio": "Desarrollador Python con 5 años de experiencia en backend, APIs y aplicaciones web. Especialista en Django, FastAPI y bases de datos, construyendo soluciones escalables con enfoque en microservicios y cloud.",
       "location": "Santiago, Chile",
-      "backgroundUrl": "/images/background-hero.png",
+      "backgroundUrl": "https://res.cloudinary.com/dxhwztmu8/image/upload/v1754617752/background-hero_oarg7y.png",
       "resumeUrl": "/pdf/cv-miguel-herize.pdf",
       "websiteUrl": "https://migherize.github.io/portafolio-frontend",
       "contact": {
@@ -28,7 +28,7 @@
       "highlights": [
         {
           "label": "Proyectos",
-          "value": "10+"
+          "value": "20+"
         },
         {
           "label": "Años",
@@ -36,14 +36,15 @@
         },
         {
           "label": "Clientes",
-          "value": "5+"
+          "value": "10+"
         },
         {
           "label": "Tecnologías",
-          "value": "20+"
+          "value": "30+"
         }
       ],
-      "image": "/images/about.png"
+      "image": "https://res.cloudinary.com/dxhwztmu8/image/upload/v1754617752/about_mga6nq.png"
+
     },
     "skills": [
       {
@@ -51,7 +52,7 @@
         "name": "Python",
         "category": "backend",
         "level": "senior",
-        "icon": "code",
+        "icon": "python",
         "color": "blue"
       },
       {
@@ -59,7 +60,7 @@
         "name": "Django",
         "category": "backend",
         "level": "senior",
-        "icon": "server",
+        "icon": "django",
         "color": "blue"
       },
       {
@@ -67,7 +68,7 @@
         "name": "FastAPI",
         "category": "backend",
         "level": "senior",
-        "icon": "zap",
+        "icon": "fastapi",
         "color": "blue"
       },
       {
@@ -75,15 +76,15 @@
         "name": "Scrapy",
         "category": "backend",
         "level": "senior",
-        "icon": "layers",
+        "icon": "scrapy",
         "color": "blue"
       },
       {
         "id": 5,
         "name": "Selenium",
-        "category": "tools",
-        "level": "senior",
-        "icon": "shield",
+        "category": "backend",
+        "level": "semi-senior",
+        "icon": "Selenium",
         "color": "green"
       },
       {
@@ -91,23 +92,23 @@
         "name": "Docker",
         "category": "tools",
         "level": "senior",
-        "icon": "package",
+        "icon": "docker",
         "color": "blue"
       },
       {
         "id": 7,
         "name": "Java",
         "category": "backend",
-        "level": "semi-senior",
-        "icon": "code",
+        "level": "junior",
+        "icon": "java",
         "color": "green"
       },
       {
         "id": 8,
         "name": "Spring Boot",
         "category": "backend",
-        "level": "semi-senior",
-        "icon": "server",
+        "level": "junior",
+        "icon": "springboot",
         "color": "green"
       },
       {
@@ -115,7 +116,7 @@
         "name": "GraphQL",
         "category": "backend",
         "level": "semi-senior",
-        "icon": "layers",
+        "icon": "graphql",
         "color": "purple"
       },
       {
@@ -123,23 +124,24 @@
         "name": "Kafka",
         "category": "backend",
         "level": "semi-senior",
-        "icon": "cloud",
+        "icon": "Kafka",
         "color": "purple"
       },
       {
         "id": 11,
-        "name": "S3",
-        "category": "backend",
+        "name": "AWS",
+        "category": "tools",
         "level": "semi-senior",
-        "icon": "cloud",
+        "icon": "aws",
         "color": "orange"
       },
+      
       {
         "id": 12,
         "name": "Lambda",
-        "category": "backend",
+        "category": "tools",
         "level": "semi-senior",
-        "icon": "zap",
+        "icon": "lambda",
         "color": "orange"
       },
       {
@@ -147,7 +149,7 @@
         "name": "Airflow",
         "category": "tools",
         "level": "semi-senior",
-        "icon": "layers",
+        "icon": "airflow",
         "color": "green"
       },
       {
@@ -155,7 +157,7 @@
         "name": "MongoDB",
         "category": "database",
         "level": "semi-senior",
-        "icon": "database",
+        "icon": "mongodb",
         "color": "green"
       },
       {
@@ -163,7 +165,7 @@
         "name": "MySQL",
         "category": "database",
         "level": "semi-senior",
-        "icon": "database",
+        "icon": "mysql",
         "color": "blue"
       },
       {
@@ -171,7 +173,7 @@
         "name": "PostgreSQL",
         "category": "database",
         "level": "semi-senior",
-        "icon": "database",
+        "icon": "postgresql",
         "color": "purple"
       },
       {
@@ -179,39 +181,39 @@
         "name": "DynamoDB",
         "category": "database",
         "level": "semi-senior",
-        "icon": "database",
+        "icon": "dynamodb",
         "color": "orange"
       },
       {
         "id": 18,
         "name": "ECS",
         "category": "tools",
-        "level": "semi-senior",
-        "icon": "cloud",
-        "color": "blue"
+        "level": "senior",
+        "icon": "ecs",
+        "color": "orange"
       },
       {
         "id": 19,
         "name": "Secrets Manager",
         "category": "tools",
         "level": "semi-senior",
-        "icon": "shield",
+        "icon": "secretsmanager",
         "color": "blue"
       },
       {
         "id": 20,
         "name": "Dynatrace",
         "category": "tools",
-        "level": "semi-senior",
-        "icon": "zap",
+        "level": "senior",
+        "icon": "dynatrace",
         "color": "purple"
       },
       {
         "id": 21,
         "name": "CloudWatch",
         "category": "tools",
-        "level": "semi-senior",
-        "icon": "cloud",
+        "level": "senior",
+        "icon": "cloudwatch",
         "color": "purple"
       },
       {
@@ -219,7 +221,7 @@
         "name": "React",
         "category": "frontend",
         "level": "junior",
-        "icon": "layers",
+        "icon": "react",
         "color": "blue"
       },
       {
@@ -227,7 +229,7 @@
         "name": "Vue",
         "category": "frontend",
         "level": "junior",
-        "icon": "layers",
+        "icon": "vue",
         "color": "green"
       },
       {
@@ -235,7 +237,7 @@
         "name": "CSS",
         "category": "frontend",
         "level": "junior",
-        "icon": "paintbrush",
+        "icon": "css",
         "color": "blue"
       },
       {
@@ -243,7 +245,7 @@
         "name": "JavaScript",
         "category": "frontend",
         "level": "junior",
-        "icon": "code",
+        "icon": "javascript",
         "color": "yellow"
       },
       {
@@ -251,7 +253,7 @@
         "name": "TypeScript",
         "category": "frontend",
         "level": "junior",
-        "icon": "code",
+        "icon": "typescript",
         "color": "blue"
       },
       {
@@ -259,7 +261,7 @@
         "name": "HTML",
         "category": "frontend",
         "level": "junior",
-        "icon": "layers",
+        "icon": "html",
         "color": "orange"
       },
       {
@@ -267,7 +269,7 @@
         "name": "Visual Studio Code",
         "category": "tools",
         "level": "tools",
-        "icon": "code",
+        "icon": "visualstudiocode",
         "color": "blue"
       },
       {
@@ -275,7 +277,7 @@
         "name": "Git",
         "category": "tools",
         "level": "tools",
-        "icon": "git-branch",
+        "icon": "git",
         "color": "green"
       },
       {
@@ -283,7 +285,7 @@
         "name": "Docker",
         "category": "tools",
         "level": "tools",
-        "icon": "package",
+        "icon": "docker",
         "color": "blue"
       },
       {
@@ -291,7 +293,7 @@
         "name": "Jenkins",
         "category": "tools",
         "level": "tools",
-        "icon": "zap",
+        "icon": "jenkins",
         "color": "purple"
       },
       {
@@ -299,7 +301,15 @@
         "name": "Postman",
         "category": "tools",
         "level": "tools",
-        "icon": "package",
+        "icon": "postman",
+        "color": "orange"
+      },
+      {
+        "id": 32,
+        "name": "nodejs",
+        "category": "backend",
+        "level": "junior",
+        "icon": "nodejs",
         "color": "orange"
       }
     ],
@@ -309,6 +319,7 @@
         "title": "Python Software Engineer",
         "type": "work",
         "company": "IA Interactive",
+        "link":"https://www.ia.com.mx/",
         "startDate": "Mar 2023",
         "endDate": "Presente",
         "description": "Migración de microservicios de Python (FastAPI) a Java (Spring Boot) para escalar y estandarizar el stack. Desarrollo de servicios web con FastAPI y GraphQL, usando Kafka para mensajería y Docker para despliegue. Integración de servicios AWS como S3, Lambda, DynamoDB, ECS y Secrets Manager. Monitoreo con Dynatrace y CloudWatch.",
@@ -340,6 +351,7 @@
         "title": "AI Trainer",
         "type": "work",
         "company": "Scale AI",
+        "link":"https://scale.com/",
         "startDate": "May 2024",
         "endDate": "Oct 2024",
         "description": "Diseño de prompts y evaluación de modelos de inteligencia artificial. Validación de código y respuestas en varios lenguajes como Python, HTML, C, C++, y JavaScript para asegurar calidad y precisión.",
@@ -361,6 +373,7 @@
         "title": "Back End Developer",
         "type": "work",
         "company": "Lodgerin",
+        "link":"https://www.lodgerin.com/",
         "startDate": "Oct 2024",
         "endDate": "Apr 2025",
         "description": "Desarrollo de microservicios RESTful con Python y FastAPI aplicando principios SOLID. Manejo de bases de datos SQL y NoSQL. Trabajo colaborativo remoto con enfoque en backend escalable y pruebas unitarias.",
@@ -385,6 +398,7 @@
         "title": "Back End Developer",
         "type": "work",
         "company": "Kukun",
+        "link":"https://mykukun.com/",
         "startDate": "Mar 2022",
         "endDate": "Mar 2023",
         "description": "Diseño de APIs con Django y FastAPI. Uso de GitFlow para control de versiones y CI/CD. Gestión y optimización de bases de datos MySQL y Postgres. Desarrollo de flujos complejos con Airflow y mensajería con Kafka.",
@@ -410,6 +424,7 @@
         "title": "Data Analyst",
         "type": "work",
         "company": "Kukun",
+        "link":"https://mykukun.com/",
         "startDate": "Feb 2021",
         "endDate": "May 2022",
         "description": "Creación de Webscraping en Python con Selenium, Scrapy y Beautiful Soup. Análisis y manipulación de datos usando Pandas y expresiones regulares.",
@@ -430,6 +445,7 @@
         "id": 104,
         "title": "Ingeniería de Sistemas",
         "company": "Universidad de los Andes",
+        "link":"https://www.ula.ve/",
         "startDate": "2014",
         "endDate": "2022",
         "description": "Formación profesional en Ingeniería de Sistemas, enfocada en desarrollo de software, algoritmos y gestión de proyectos.",
@@ -439,6 +455,7 @@
         "id": 103,
         "title": "Machine Learning Developer Career",
         "company": "Anyone AI",
+        "link":"https://www.anyoneai.com/",
         "startDate": "2023",
         "endDate": "2024",
         "description": "Programa intensivo especializado en Machine Learning, Deep Learning y despliegue de modelos en producción.",
@@ -448,6 +465,7 @@
         "id": 102,
         "title": "PCAP – Certified Associate in Python Programming",
         "company": "Python Institute",
+        "link":"https://pythoninstitute.org/",
         "startDate": "2024",
         "endDate": "2024",
         "description": "Certificación oficial del Python Institute. Enfocada en programación, estructuras de datos y fundamentos de Python.",
@@ -457,6 +475,7 @@
         "id": 101,
         "title": "Machine Learning y Deep Learning",
         "company": "Platzi",
+        "link":"https://platzi.com/",
         "startDate": "2024",
         "endDate": "Actualmente",
         "description": "Profundiza en algoritmia, aprendizaje supervisado, no supervisado, redes neuronales, y el despliegue de modelos de Data Science e Inteligencia Artificial en producción.",
@@ -465,45 +484,45 @@
     ],
     "projects": [
       {
-        "id": 1,
+        "id": 3,
         "title": "API Academia de Magia",
         "description": "API para gestión de usuarios, inscripciones y operaciones CRUD en un sistema académico ficticio.",
-        "image": "/images/api-academia-magia.png",
+        "image": "https://github.com/migherize/Reino_del_Trebol/raw/main/diagrams/swagger.png",
         "demoUrl": "",
         "githubUrl": "https://github.com/migherize/Reino_del_Trebol",
         "technologies": [
           "FastAPI",
           "Pytest",
-          "SQLAlchemy",
+          "Bae de datos (RDB)",
           "Docker"
         ]
       },
       {
         "id": 2,
-        "title": "Webscraping de Turismo Madrid",
-        "description": "Proyecto de webscraping sobre la web de turismo de Madrid usando Scrapy, Docker y MongoDB.",
-        "image": "/images/turismo-madrid.png",
-        "demoUrl": "",
-        "githubUrl": "https://github.com/migherize/TourismMadrid",
+        "title": "Scraper de Películas de IMDb",
+        "description": "Este proyecto implementa un web scraper usando Scrapy para extraer información de las mejores películas de IMDb.",
+        "image": "https://github.com/migherize/imdb-movie-scraper/raw/develop/docs/API.png",
+        "demoUrl": "https://imdb-movie-scraper-1.onrender.com/docs",
+        "githubUrl": "https://github.com/migherize/imdb-movie-scraper",
         "technologies": [
           "Fastapi",
           "Scrapy",
-          "MongoDB",
+          "Bae de datos (RDB)",
           "Docker"
         ]
       },
       {
-        "id": 3,
-        "title": "Webscraping con Airflow",
-        "description": "Monitoreo en Airflow para la ejecución y automatización de procesos de webscraping.",
-        "image": "/images/airflow-monitoring.jpeg",
+        "id": 1,
+        "title": "TidyTasks",
+        "description": "TidyTasks es una plataforma ligera para la gestión personal y colaborativa de tareas, diseñada para ser simple y eficiente.",
+        "image": "https://github.com/migherize/TidyTasks/raw/main/docs/endpoints_capture.png",
         "demoUrl": "",
-        "githubUrl": "https://gitlab.com/migherize/airflow-webscraping",
+        "githubUrl": "https://github.com/migherize/TidyTasks",
         "technologies": [
-          "Apache Airflow",
           "FastAPI",
           "Docker",
-          "Kafka"
+          "Pytest",
+          "Bae de datos (RDB)"
         ]
       }
     ],

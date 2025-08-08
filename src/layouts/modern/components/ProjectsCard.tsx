@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Globe } from "lucide-react";
 import { Button } from "@/layouts/modern/components/ui/button";
 import { Project } from "@/types/schema";
 
@@ -58,7 +58,7 @@ export function ProjectsSection({ projects, allProjects }: Props) {
                           rel="noopener noreferrer"
                           className={`hover:${getColorClass(index)} text-slate-400 transition-colors`}
                         >
-                          <ExternalLink className="h-4 w-4" />
+                          <Globe className="h-4 w-4" />
                         </a>
                       )}
                       {project.githubUrl && (
