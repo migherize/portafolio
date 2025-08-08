@@ -1,153 +1,231 @@
 # 🎨 Portafolio Frontend
 
-Frontend de la plataforma de portafolios para programadores, construida con React y Tailwind CSS.
+Frontend para mostrar portafolios personales a partir de archivos JSON. Construido con React + Vite y Tailwind CSS.
 
 ---
 
-## 🎯 Objetivo
+## 📌 ¿Qué hace?
 
-Permitir a desarrolladores crear, personalizar y compartir su portafolio profesional mediante una URL única:
-
-```
-[https://portafolio.maria/](https://portafolio.maria/)
-[https://portafolio.pedro/](https://portafolio.pedro/)
-```
+- Renderiza un portafolio leyendo un archivo JSON por `username` desde `public/data/`.
+- Permite elegir entre distintos layouts mediante `portfolioType` en el JSON (por ejemplo: `classic`, `modern`).
+- URL por usuario: `/:username` (ej.: `/DummyUser`).
 
 ---
 
 ## 🛠 Tecnologías
 
-- React (con Vite)
-- JavaScript
-- Tailwind CSS
-- React Router (opcional)
-- Despliegue en AWS (Free Tier) con dominio y subdominios personalizados
+- React 19 + Vite 6
+- Tailwind CSS 4
+- React Router 7
+- Radix UI + Lucide Icons (para componentes del layout moderno)
+- Alias de imports: `@` → `src/` (configurado en `vite.config.js`)
 
 ---
 
-## 🚀 Características Principales
-
-- Interfaz responsive y moderna.
-- Secciones personalizables:
-  - Sobre mí
-  - Tecnologías
-  - Proyectos
-  - Certificados
-  - Retos (Challenges)
-  - Contacto
-- Compatible con integración al backend (API REST)
-- Subdominios únicos para cada portafolio
-
----
-
-## 📂 Estructura del Proyecto
+## 📂 Estructura del proyecto
 
 ```
-portafolio-frontend/
+.
 ├── public/
+│   ├── data/
+│   │   ├── DummyUser.json
+│   │   └── <TuUsuario>.json
+│   ├── images/
+│   └── pdf/
 ├── src/
-│   ├── assets/
-│   ├── components/
+│   ├── layouts/
+│   │   ├── LayoutFactory.tsx
+│   │   ├── classic/
+│   │   │   └── index.tsx
+│   │   └── modern/
+│   │       ├── components/
+│   │       ├── hooks/
+│   │       ├── sections/
+│   │       └── index.tsx
 │   ├── pages/
+│   │   ├── HomePage.tsx
+│   │   └── UserProfilePage.tsx
+│   ├── types/
+│   │   └── schema.ts
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
-├── tailwind.config.js
-├── postcss.config.js
+├── vite.config.js
 ├── package.json
-└── vite.config.js
-````
+├── docker-compose.yml
+└── dockerfile
+```
+
 ---
 
 ## ⚙️ Requisitos
 
 - Node.js 18+
-- npm (o yarn)
-- Navegador moderno (Chrome, Firefox, etc.)
+- npm (o pnpm/yarn)
+- Navegador moderno
+- Opcional: Docker y Docker Compose
 
 ---
 
-## 🚀 Ejecución Local y con Docker
+## 🚀 Instalación y ejecución
 
-### Opción 1: Ejecutar localmente
-
-Ya está detallado en la sección anterior, pero para resumir:
+1) Clonar e instalar dependencias
 
 ```bash
-# Clona el repositorio
-git clone https://github.com/tu_usuario/portafolio-frontend.git
-cd portafolio-frontend
-
-# Instala dependencias
 npm install
-
-# Ejecuta servidor de desarrollo (Vite)
-npm run dev
-
-# Abre en el navegador
-http://localhost:5173/
 ```
 
----
+2) Ejecutar en desarrollo
 
-### Opción 2: Ejecutar con Docker
+```bash
+npm run dev
+# Abre http://localhost:5173
+```
 
-Si prefieres usar Docker para no instalar dependencias directamente en tu máquina:
+3) Rutas disponibles
 
-1. Asegúrate de tener Docker y Docker Compose instalados.
+- Página de inicio: `/` (ingresas el `username` y navega a su perfil)
+- Perfil por `username`: `/:username` (ej.: `/DummyUser`)
 
-2. Construye y levanta el contenedor:
+### Opción Docker
 
 ```bash
 docker-compose up --build
-```
-
-3. El frontend estará disponible en:
-
-```
-http://localhost:5173/
-```
-
-4. Para detenerlo:
-
-```bash
-docker-compose down
+# Abre http://localhost:5173
 ```
 
 ---
 
-## 🧰 React + Vite
+## 🧱 Esquema de datos del usuario
 
-* Este proyecto usa React con Vite para un entorno de desarrollo rápido y moderno.
-* Utiliza **Hot Module Replacement (HMR)** para recargar los cambios sin perder el estado.
-* Para soporte avanzado de React, puedes usar plugins oficiales:
+El tipo esperado está en `src/types/schema.ts` (interfaz `UserProfile`). El JSON se guarda en `public/data/<username>.json` y DEBE ser un array con uno o más perfiles. Ejemplo mínimo (ver `public/data/DummyUser.json`):
 
-  * `@vitejs/plugin-react` (Babel)
-  * `@vitejs/plugin-react-swc` (SWC, más rápido)
-* ESLint está configurado para mantener calidad del código.
-* Para proyectos más complejos se recomienda usar TypeScript con reglas de lint específicas.
+```json
+[
+  {
+    "username": "DummyUser",
+    "portfolioType": "classic",
+    "personalInfo": {
+      "fullName": "Dummy FullName",
+      "headline": "Dummy Headline",
+      "shortBio": "Esta es una biografía de ejemplo.",
+      "location": "Ciudad Ejemplo",
+      "backgroundUrl": "",
+      "resumeUrl": "",
+      "websiteUrl": "",
+      "contact": { "email": "dummy@example.com", "phone": "+0000000000" },
+      "socials": { "github": "https://github.com/dummy", "linkedin": "https://linkedin.com/in/dummy" }
+    },
+    "about": { "description": ["..."], "highlights": [{"label":"Proyectos","value":"5+"}], "image": "" },
+    "skills": [],
+    "experience": [],
+    "projects": [],
+    "education": []
+  }
+]
+```
+
+Cómo se usa:
+- El componente `UserProfilePage` hace fetch de `/data/<username>.json` y busca dentro del array el objeto cuyo `username` coincida.
+- El layout a renderizar se decide con `portfolioType` mediante `src/layouts/LayoutFactory.tsx`.
 
 ---
 
-## 📝 Notas
+## 🧪 Usar el DummyUser (plantilla)
 
-* El proyecto usa Vite para un entorno de desarrollo más rápido y moderno.
-* Puedes agregar nuevas secciones como componentes en `src/components/`.
-* Estilos personalizados se gestionan con utilidades de Tailwind CSS.
+- Abre `public/data/DummyUser.json`.
+- Duplica el archivo y nómbralo con tu usuario, por ejemplo: `public/data/JuanPerez.json`.
+- Dentro del JSON, cambia `username` a `"JuanPerez"` y completa tus datos.
+- Inicia la app y visita: `http://localhost:5173/JuanPerez`.
+- Asegúrate que `portfolioType` sea uno válido (por defecto `classic` o `modern`).
+
+Tip: Si solo quieres ver algo rápido, visita `http://localhost:5173/DummyUser`.
+
+---
+
+## 🧩 Layouts disponibles
+
+- `classic`: layout simple de texto (ver `src/layouts/classic/index.tsx`).
+- `modern`: layout completo con secciones (ver `src/layouts/modern/`).
+
+El layout se elige desde el JSON con `portfolioType`.
+
+---
+
+## 🛠️ Crear un layout nuevo
+
+1) Crear carpeta del layout
+
+```
+src/layouts/miLayout/
+└── index.tsx
+```
+
+`index.tsx` debe exportar un componente por defecto que reciba `userData: UserProfile`:
+
+```tsx
+import { UserProfile } from "@/types/schema";
+
+interface Props { userData: UserProfile }
+export default function MiLayout({ userData }: Props) {
+  return (
+    <div>
+      <h1>{userData.personalInfo.fullName}</h1>
+      {/* Renderiza tus secciones aquí */}
+    </div>
+  );
+}
+```
+
+2) Registrar el layout en la fábrica
+
+Edita `src/layouts/LayoutFactory.tsx` y agrega tu caso:
+
+```tsx
+import ClassicLayout from "@/layouts/classic/index";
+import ModernLayout from "@/layouts/modern/index";
+import MiLayout from "@/layouts/miLayout/index"; // <— nuevo
+
+export default function LayoutFactory({ userData }) {
+  switch (userData.portfolioType) {
+    case "classic":
+      return <ClassicLayout userData={userData} />;
+    case "modern":
+      return <ModernLayout userData={userData} />;
+    case "miLayout": // <— nuevo
+      return <MiLayout userData={userData} />;
+    default:
+      return <p>Tipo de portafolio desconocido</p>;
+  }
+}
+```
+
+3) Usarlo desde el JSON del usuario
+
+En `public/data/<username>.json` establece:
+
+```json
+"portfolioType": "miLayout"
+```
+
+Listo: al navegar a `/:username` se renderizará tu layout.
+
+---
+
+## 🔎 Detalles útiles
+
+- Fetch de datos: `src/layouts/modern/hooks/useFetchData.ts`.
+- Router: `src/App.jsx` define `/:username`.
+- Alias `@`: configurado en `vite.config.js` para importar desde `src`.
+- Dark mode: hook en `src/layouts/modern/hooks/useDarkMode.ts`.
 
 ---
 
 ## 🤝 Contribuciones
 
-* Usa ramas siguiendo **Gitflow** y pull requests para contribuir.
-* Se aceptan mejoras, sugerencias y reporte de bugs a través de issues.
-
----
+- Issues y PRs son bienvenidos.
+- Estilo de código con ESLint.
 
 ## 📄 Licencia
 
-Este proyecto es de código abierto bajo la licencia **MIT**.
-
----
-
-¡Gracias por colaborar!
+MIT.
