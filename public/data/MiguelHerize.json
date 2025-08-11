@@ -484,17 +484,17 @@
     ],
     "projects": [
       {
-        "id": 3,
-        "title": "API Academia de Magia",
-        "description": "API para gestión de usuarios, inscripciones y operaciones CRUD en un sistema académico ficticio.",
-        "image": "https://github.com/migherize/Reino_del_Trebol/raw/main/diagrams/swagger.png",
+        "id": 1,
+        "title": "TidyTasks",
+        "description": "TidyTasks es una plataforma ligera para la gestión personal y colaborativa de tareas, diseñada para ser simple y eficiente.",
+        "image": "https://github.com/migherize/TidyTasks/raw/main/docs/endpoints_capture.png",
         "demoUrl": "",
-        "githubUrl": "https://github.com/migherize/Reino_del_Trebol",
+        "githubUrl": "https://github.com/migherize/TidyTasks",
         "technologies": [
           "FastAPI",
+          "Docker",
           "Pytest",
-          "Bae de datos (RDB)",
-          "Docker"
+          "Bae de datos (RDB)"
         ]
       },
       {
@@ -512,17 +512,17 @@
         ]
       },
       {
-        "id": 1,
-        "title": "TidyTasks",
-        "description": "TidyTasks es una plataforma ligera para la gestión personal y colaborativa de tareas, diseñada para ser simple y eficiente.",
-        "image": "https://github.com/migherize/TidyTasks/raw/main/docs/endpoints_capture.png",
+        "id": 3,
+        "title": "API Academia de Magia",
+        "description": "API para gestión de usuarios, inscripciones y operaciones CRUD en un sistema académico ficticio.",
+        "image": "https://github.com/migherize/Reino_del_Trebol/raw/main/diagrams/swagger.png",
         "demoUrl": "",
-        "githubUrl": "https://github.com/migherize/TidyTasks",
+        "githubUrl": "https://github.com/migherize/Reino_del_Trebol",
         "technologies": [
           "FastAPI",
-          "Docker",
           "Pytest",
-          "Bae de datos (RDB)"
+          "Bae de datos (RDB)",
+          "Docker"
         ]
       }
     ],
