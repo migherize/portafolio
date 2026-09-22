@@ -4,8 +4,8 @@
     "portfolioType": "modern",
     "personalInfo": {
       "fullName": "Miguel Herize",
-      "headline": "Python Backend Developer | AWS | Data Engineer | Machine Learning Engineer",
-      "shortBio": "Desarrollador Python con 5 años de experiencia en backend, APIs y aplicaciones web. Especialista en Django, FastAPI y bases de datos, construyendo soluciones escalables con enfoque en microservicios y cloud.",
+      "headline": "Ingeniero de Software · Backend, Pagos & Fintech · Desarrollo asistido por IA",
+      "shortBio": "Ingeniero de Software con más de 5 años construyendo backends en Python, Java y TypeScript: microservicios de pagos, plataformas fintech y APIs escalables en AWS. Combino ingeniería sólida con flujos de desarrollo asistidos por IA (Cursor, Claude, Kiro) para entregar con calidad.",
       "location": "Santiago, Chile",
       "backgroundUrl": "https://res.cloudinary.com/dxhwztmu8/image/upload/v1754617752/background-hero_oarg7y.png",
       "resumeUrl": "/pdf/cv-miguel-herize.pdf",
@@ -21,26 +21,26 @@
     },
     "about": {
       "description": [
-        "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes con más de 5 años de experiencia en desarrollo de software.",
-        "He trabajado en proyectos de backend y microservicios, principalmente con Python y frameworks como FastAPI y Django.",
-        "Me apasiona aprender nuevas tecnologías y aplicar buenas prácticas para construir software escalable y eficiente."
+        "Soy Ingeniero de Sistemas graduado de la Universidad de los Andes. Mi trayectoria va de backend y datos en Python hacia ingeniería de software en producción: APIs, microservicios y plataformas en la nube.",
+        "Hoy trabajo en microservicios de pagos (Python/Java en AWS) y como Desarrollador IA: backend NestJS y app móvil React Native para un cliente fintech.",
+        "Uso desarrollo asistido por IA (Cursor, Claude, Kiro, Amazon Q, Lovable, Rork) en migraciones, revisiones y entrega, sin reemplazar criterio de ingeniería. Certificado PCAP y formación continua en ML."
       ],
       "highlights": [
-        {
-          "label": "Proyectos",
-          "value": "20+"
-        },
         {
           "label": "Años",
           "value": "5+"
         },
         {
-          "label": "Clientes",
-          "value": "10+"
+          "label": "Certificación",
+          "value": "PCAP"
         },
         {
-          "label": "Tecnologías",
-          "value": "30+"
+          "label": "Stack",
+          "value": "Py · Java · TS"
+        },
+        {
+          "label": "Enfoque",
+          "value": "Backend"
         }
       ],
       "image": "https://res.cloudinary.com/dxhwztmu8/image/upload/v1754617752/about_mga6nq.png"
@@ -99,7 +99,7 @@
         "id": 7,
         "name": "Java",
         "category": "backend",
-        "level": "junior",
+        "level": "semi-senior",
         "icon": "java",
         "color": "green"
       },
@@ -107,7 +107,7 @@
         "id": 8,
         "name": "Spring Boot",
         "category": "backend",
-        "level": "junior",
+        "level": "semi-senior",
         "icon": "springboot",
         "color": "green"
       },
@@ -220,7 +220,7 @@
         "id": 22,
         "name": "React",
         "category": "frontend",
-        "level": "junior",
+        "level": "semi-senior",
         "icon": "react",
         "color": "blue"
       },
@@ -252,7 +252,7 @@
         "id": 26,
         "name": "TypeScript",
         "category": "frontend",
-        "level": "junior",
+        "level": "semi-senior",
         "icon": "typescript",
         "color": "blue"
       },
@@ -305,10 +305,10 @@
         "color": "orange"
       },
       {
-        "id": 32,
-        "name": "nodejs",
+        "id": 33,
+        "name": "NestJS",
         "category": "backend",
-        "level": "junior",
+        "level": "semi-senior",
         "icon": "nodejs",
         "color": "orange"
       }
@@ -316,13 +316,44 @@
     "experience": [
       {
         "id": 1,
+        "title": "Desarrollador IA",
+        "type": "work",
+        "company": "Kabeli",
+        "link": "https://kabeli.cl/",
+        "startDate": "2025 – Presente",
+        "endDate": "Presente",
+        "description": "Backend NestJS y app móvil React Native para un cliente fintech. APIs, datos y flujos de producto en producción, con desarrollo asistido por IA (Cursor, Claude, Lovable, Rork) en especificaciones, implementación y revisiones.",
+        "technologies": [
+          "NestJS",
+          "TypeScript",
+          "PostgreSQL",
+          "TypeORM",
+          "React Native",
+          "Expo",
+          "Docker",
+          "AWS",
+          "GitHub Actions",
+          "Cursor",
+          "Claude",
+          "Lovable",
+          "Rork"
+        ],
+        "achievements": [
+          "Backend NestJS con APIs REST, PostgreSQL y lógica de dominio para producto fintech",
+          "App móvil React Native (Expo) integrada a servicios y flujos en producción",
+          "Modelado de datos, migraciones y despliegue con Docker y AWS",
+          "Desarrollo asistido por IA (Cursor, Claude, Lovable, Rork) en especificaciones, implementación y revisiones"
+        ]
+      },
+      {
+        "id": 2,
         "title": "Python Software Engineer",
         "type": "work",
         "company": "IA Interactive",
-        "link":"https://www.ia.com.mx/",
-        "startDate": "Mar 2023",
+        "link": "https://www.ia.com.mx/",
+        "startDate": "2023 – Presente",
         "endDate": "Presente",
-        "description": "Migración de microservicios de Python (FastAPI) a Java (Spring Boot) para escalar y estandarizar el stack. Desarrollo de servicios web con FastAPI y GraphQL, usando Kafka para mensajería y Docker para despliegue. Integración de servicios AWS como S3, Lambda, DynamoDB, ECS y Secrets Manager. Monitoreo con Dynatrace y CloudWatch.",
+        "description": "Microservicios de pagos en Python (FastAPI) y Java (Spring Boot), con evolución continua del stack para escalar y estandarizar servicios en la nube. APIs con GraphQL, mensajería con Kafka y despliegue con Docker. Integración de servicios AWS (S3, Lambda, DynamoDB, ECS, Secrets Manager). Observabilidad con Dynatrace y CloudWatch. Flujo de ingeniería apoyado en agentes de IA (Kiro, Amazon Q) y skills para análisis, migraciones y revisiones de código.",
         "technologies": [
           "Python",
           "FastAPI",
@@ -337,35 +368,16 @@
           "Secrets Manager",
           "Dynatrace",
           "CloudWatch",
+          "Kiro",
+          "Amazon Q",
           "Postman"
         ],
         "achievements": [
-          "Migración tecnológica a Java/Spring Boot",
-          "Diseño e implementación de servicios escalables en FastAPI",
+          "Evolución del stack Java/Spring Boot junto a servicios FastAPI en producción",
+          "Diseño e implementación de microservicios escalables y APIs de pagos",
           "Automatización y pruebas de APIs",
-          "Integración de múltiples servicios AWS y monitoreo avanzado"
-        ]
-      },
-      {
-        "id": 2,
-        "title": "AI Trainer",
-        "type": "work",
-        "company": "Scale AI",
-        "link":"https://scale.com/",
-        "startDate": "May 2024",
-        "endDate": "Oct 2024",
-        "description": "Diseño de prompts y evaluación de modelos de inteligencia artificial. Validación de código y respuestas en varios lenguajes como Python, HTML, C, C++, y JavaScript para asegurar calidad y precisión.",
-        "technologies": [
-          "Python",
-          "HTML",
-          "C",
-          "C++",
-          "JavaScript"
-        ],
-        "achievements": [
-          "Desarrollo de prompts efectivos para entrenamiento de IA",
-          "Validación técnica de respuestas en distintos lenguajes",
-          "Aporte al desarrollo de aplicaciones de IA"
+          "Observabilidad con Dynatrace y CloudWatch en servicios AWS",
+          "Agentes de IA (Kiro, Amazon Q) y skills en análisis, migraciones y revisiones de código"
         ]
       },
       {
@@ -373,10 +385,10 @@
         "title": "Back End Developer",
         "type": "work",
         "company": "Lodgerin",
-        "link":"https://www.lodgerin.com/",
-        "startDate": "Oct 2024",
-        "endDate": "Apr 2025",
-        "description": "Desarrollo de microservicios RESTful con Python y FastAPI aplicando principios SOLID. Manejo de bases de datos SQL y NoSQL. Trabajo colaborativo remoto con enfoque en backend escalable y pruebas unitarias.",
+        "link": "https://www.lodgerin.com/",
+        "startDate": "2024 – 2025",
+        "endDate": "2025",
+        "description": "Microservicios FastAPI para scraping automatizado de listados de alquiler en España, con re-ejecución programada. SQL y NoSQL, pruebas unitarias y arquitectura escalable en entorno remoto.",
         "technologies": [
           "Python",
           "FastAPI",
@@ -388,20 +400,42 @@
           "MongoDB"
         ],
         "achievements": [
-          "Implementación de servicios RESTful escalables",
-          "Uso de buenas prácticas de arquitectura y principios SOLID",
-          "Colaboración efectiva en entorno remoto"
+          "Servicios RESTful para extracción y actualización continua de listados",
+          "Optimización de consultas SQL y manejo eficiente de datos",
+          "Buenas prácticas SOLID y pruebas en equipo distribuido"
         ]
       },
       {
         "id": 4,
+        "title": "AI Trainer",
+        "type": "work",
+        "company": "Scale AI",
+        "link": "https://scale.com/",
+        "startDate": "2024 – 2025",
+        "endDate": "2025",
+        "description": "Diseño de prompts y evaluación de respuestas de modelos de IA. Validación técnica de código generado en Python, JavaScript, HTML, C y C++ para asegurar calidad y cobertura de casos de uso.",
+        "technologies": [
+          "Python",
+          "JavaScript",
+          "HTML",
+          "C",
+          "C++"
+        ],
+        "achievements": [
+          "Prompts efectivos para entrenamiento y evaluación de modelos",
+          "Validación rigurosa de código y respuestas en múltiples lenguajes",
+          "Feedback estructurado para mejorar rendimiento de modelos"
+        ]
+      },
+      {
+        "id": 5,
         "title": "Back End Developer",
         "type": "work",
         "company": "Kukun",
-        "link":"https://mykukun.com/",
-        "startDate": "Mar 2022",
-        "endDate": "Mar 2023",
-        "description": "Diseño de APIs con Django y FastAPI. Uso de GitFlow para control de versiones y CI/CD. Gestión y optimización de bases de datos MySQL y Postgres. Desarrollo de flujos complejos con Airflow y mensajería con Kafka.",
+        "link": "https://mykukun.com/",
+        "startDate": "2022 – 2023",
+        "endDate": "2023",
+        "description": "APIs con Django y FastAPI; GitFlow y CI/CD. Optimización de MySQL y PostgreSQL. Flujos de scraping automatizados con Airflow e integración de mensajería Kafka en microservicios Docker.",
         "technologies": [
           "Python",
           "Django",
@@ -414,20 +448,20 @@
           "GitFlow"
         ],
         "achievements": [
-          "Automatización de tareas con Airflow",
-          "Integración de microservicios usando Docker",
-          "Uso de metodologías de control de versiones y despliegue"
+          "Automatización de pipelines de scraping con Airflow",
+          "Microservicios Docker con pruebas y documentación",
+          "Integración Kafka para procesamiento de datos"
         ]
       },
       {
-        "id": 5,
-        "title": "Data Analyst",
+        "id": 6,
+        "title": "Data Engineer",
         "type": "work",
         "company": "Kukun",
-        "link":"https://mykukun.com/",
-        "startDate": "Feb 2021",
-        "endDate": "May 2022",
-        "description": "Creación de Webscraping en Python con Selenium, Scrapy y Beautiful Soup. Análisis y manipulación de datos usando Pandas y expresiones regulares.",
+        "link": "https://mykukun.com/",
+        "startDate": "2021 – 2022",
+        "endDate": "2022",
+        "description": "Web scraping con Selenium, Scrapy y Beautiful Soup. Análisis y manipulación con Pandas; matching fuzzy entre bases de datos.",
         "technologies": [
           "Python",
           "Selenium",
@@ -436,9 +470,9 @@
           "Pandas"
         ],
         "achievements": [
-          "Extracción eficiente de datos mediante Webscraping",
-          "Análisis de datos con Pandas y Python",
-          "Optimización de procesos de recolección de datos"
+          "Extracción eficiente de datos web a escala",
+          "Análisis y limpieza con Pandas y expresiones regulares",
+          "Algoritmos de similitud fuzzy para cruce de registros"
         ]
       },
       {
