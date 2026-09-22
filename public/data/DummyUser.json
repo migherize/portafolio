@@ -9,6 +9,7 @@
       "location": "Ciudad Ejemplo",
       "backgroundUrl": "",
       "resumeUrl": "",
+      "resumeUrlEn": "",
       "websiteUrl": "",
       "contact": {
         "email": "dummy@example.com",

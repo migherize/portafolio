@@ -15,6 +15,7 @@ export interface PersonalInfo {
   location: string;
   backgroundUrl: string;
   resumeUrl: string;
+  resumeUrlEn?: string;
   websiteUrl: string;
   contact: Contact;
   socials: Socials;

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Github, Linkedin, Mail, Download, Folder } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Folder, ChevronDown } from "lucide-react";
 import { PersonalInfo } from "@/types/schema";
 interface HeroSectionCardProps {
   heroData: PersonalInfo;
@@ -13,12 +13,15 @@ export default function HeroSectionCard({ heroData, onScrollToProjects }: HeroSe
     shortBio,
     backgroundUrl,
     resumeUrl,
+    resumeUrlEn,
     socials,
     contact,
   } = heroData;
 
   const [showCopyMessage, setShowCopyMessage] = useState(false);
+  const [cvMenuOpen, setCvMenuOpen] = useState(false);
   const timeoutRef = useRef<number | null>(null);
+  const cvMenuRef = useRef<HTMLDivElement>(null);
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -27,6 +30,22 @@ export default function HeroSectionCard({ heroData, onScrollToProjects }: HeroSe
     window.addEventListener("resize", checkDesktop);
     return () => window.removeEventListener("resize", checkDesktop);
   }, []);
+
+  useEffect(() => {
+    if (!cvMenuOpen) return;
+    const handlePointerDown = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node;
+      if (cvMenuRef.current && !cvMenuRef.current.contains(target)) {
+        setCvMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("touchstart", handlePointerDown);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("touchstart", handlePointerDown);
+    };
+  }, [cvMenuOpen]);
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(contact.email);
@@ -68,14 +87,52 @@ export default function HeroSectionCard({ heroData, onScrollToProjects }: HeroSe
 
         {/* Botones */}
         <div className="flex gap-4 justify-center flex-wrap">
-          <a
-            href={resumeUrl}
-            download
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow hover:scale-105 transition disabled:opacity-50 border-0 inline-flex items-center justify-center"
-          >
-            <Download className="inline-block w-4 h-4 mr-2" />
-            Descargar CV
-          </a>
+          <div className="relative" ref={cvMenuRef}>
+            <button
+              type="button"
+              onClick={() => setCvMenuOpen((open) => !open)}
+              aria-expanded={cvMenuOpen}
+              aria-haspopup="menu"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg shadow hover:scale-105 transition border-0 inline-flex items-center justify-center gap-2 min-h-[44px]"
+            >
+              <Download className="w-4 h-4 shrink-0" />
+              Descargar CV
+              <ChevronDown
+                className={`w-4 h-4 shrink-0 transition-transform ${cvMenuOpen ? "rotate-180" : ""}`}
+                aria-hidden
+              />
+            </button>
+            {cvMenuOpen && (
+              <div
+                role="menu"
+                aria-label="Idioma del CV"
+                className="absolute left-1/2 z-50 mt-2 w-44 max-w-[calc(100vw-2rem)] -translate-x-1/2 rounded-lg border border-slate-600 bg-slate-900/95 py-1 shadow-xl backdrop-blur-sm sm:left-0 sm:translate-x-0"
+              >
+                {resumeUrl && (
+                  <a
+                    role="menuitem"
+                    href={resumeUrl}
+                    download
+                    onClick={() => setCvMenuOpen(false)}
+                    className="flex min-h-[44px] items-center px-4 py-3 text-sm text-white hover:bg-blue-600/90 active:bg-blue-700"
+                  >
+                    Español
+                  </a>
+                )}
+                {resumeUrlEn && (
+                  <a
+                    role="menuitem"
+                    href={resumeUrlEn}
+                    download
+                    onClick={() => setCvMenuOpen(false)}
+                    className="flex min-h-[44px] items-center px-4 py-3 text-sm text-white hover:bg-blue-600/90 active:bg-blue-700"
+                  >
+                    Inglés
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
           <button
             onClick={onScrollToProjects}
             className="flex items-center bg-transparent hover:bg-blue-700 text-white hover:text-white px-6 py-2 rounded-lg border border-white hover:border-blue-700 transition"

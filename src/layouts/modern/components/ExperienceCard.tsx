@@ -8,6 +8,68 @@ interface Props {
 
 type Align = "left" | "right";
 
+/** Fixed gutter so "Presente" labels don’t shift cards vs year-only stacks. */
+const TIMELINE_DATE_COLUMN_CLASS =
+  "flex w-[4.75rem] min-w-[4.75rem] shrink-0 flex-col items-center";
+
+/** Timeline axis runs upward in time: show end (newer) above start (older). */
+function parseTimelineRange(exp: Experience): { start: string; end: string } {
+  const combined = (exp.startDate ?? "").trim();
+  const rangeMatch = combined.match(/^(.+?)\s*[–-]\s*(.+)$/u);
+  if (rangeMatch) {
+    return { start: rangeMatch[1].trim(), end: rangeMatch[2].trim() };
+  }
+  const endField = (exp.endDate ?? "").trim();
+  const isOngoing = /presente|actualmente|lifetime/i.test(endField);
+  if (endField && !isOngoing && endField !== combined) {
+    return { start: combined, end: endField };
+  }
+  if (isOngoing) {
+    return { start: combined, end: endField || "Presente" };
+  }
+  return { start: combined, end: combined };
+}
+
+function isOngoingLabel(label: string): boolean {
+  return /presente|actualmente|lifetime/i.test(label.trim());
+}
+
+function TimelineDateStack({ exp }: { exp: Experience }) {
+  const { start, end } = parseTimelineRange(exp);
+  const same =
+    !start ||
+    !end ||
+    start.localeCompare(end, undefined, { sensitivity: "accent" }) === 0;
+
+  if (same) {
+    return (
+      <span className="w-full text-xs text-slate-400 mt-2 text-center leading-snug">
+        {start || end}
+      </span>
+    );
+  }
+
+  if (isOngoingLabel(end)) {
+    return (
+      <div className="flex w-full flex-col items-center text-xs text-slate-400 mt-2 text-center leading-snug">
+        <span className="whitespace-nowrap">{end}</span>
+        <span
+          className="my-0.5 h-4 w-px shrink-0 bg-slate-500/70"
+          aria-hidden
+        />
+        <span className="whitespace-nowrap">{start}</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex w-full flex-col items-center text-xs text-slate-400 mt-2 text-center leading-snug">
+      <span className="whitespace-nowrap">{end} –</span>
+      <span className="whitespace-nowrap">{start}</span>
+    </div>
+  );
+}
+
 export default function ExperienceList({ experiences }: Props) {
   const getColorClass = (index: number) => {
     const colors = ["bg-blue-500", "bg-purple-500", "bg-green-500"];
@@ -40,18 +102,18 @@ export default function ExperienceList({ experiences }: Props) {
       {align === "left" && (
         <>
           {/* Línea + Punto + Año */}
-          <div className="flex flex-col items-center">
+          <div className={TIMELINE_DATE_COLUMN_CLASS}>
             <div
               className={`w-4 h-4 rounded-full border-4 border-slate-900 ${getColorClass(
                 index
               )} animate-pulse`}
             />
-            <span className="text-xs text-slate-400 mt-2">{exp.startDate}</span>
+            <TimelineDateStack exp={exp} />
             <div className="h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500" />
           </div>
   
           {/* Contenido */}
-          <div className="bg-slate-700 rounded-lg p-3 hover:bg-slate-600 transition-colors duration-300 w-full text-left">
+          <div className="min-w-0 flex-1 bg-slate-700 rounded-lg p-3 hover:bg-slate-600 transition-colors duration-300 text-left">
             <h3 className={`text-base font-bold flex items-center gap-2 ${getTextColorClass(index)}`}>
               <Briefcase className="w-4 h-4 text-blue-400" />
               {exp.title}
@@ -89,7 +151,7 @@ export default function ExperienceList({ experiences }: Props) {
       {align === "right" && (
         <>
           {/* Contenido */}
-          <div className="bg-slate-700 rounded-lg p-3 hover:bg-slate-600 transition-colors duration-300 w-full text-right">
+          <div className="min-w-0 flex-1 bg-slate-700 rounded-lg p-3 hover:bg-slate-600 transition-colors duration-300 text-right">
           <h3 className={`text-base font-bold flex items-center gap-2 justify-end ${getTextColorClass(index)}`}>
             <span>{exp.title}</span>
             <Briefcase className="w-4 h-4 text-blue-400" />
@@ -124,13 +186,13 @@ export default function ExperienceList({ experiences }: Props) {
           </div>
   
           {/* Línea + Punto + Año */}
-          <div className="flex flex-col items-center">
+          <div className={TIMELINE_DATE_COLUMN_CLASS}>
             <div
               className={`w-4 h-4 rounded-full border-4 border-slate-900 ${getColorClass(
                 index
               )} animate-pulse`}
             />
-            <span className="text-xs text-slate-400 mt-2">{exp.startDate}</span>
+            <TimelineDateStack exp={exp} />
             <div className="h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500" />
           </div>
         </>
